@@ -1,0 +1,21 @@
+.success-text {
+	display: none;
+}
+
+.error-text {
+	display: none;
+	color: darkred;
+}
+
+.curtain {
+	overflow: hidden;
+}
+
+.session-choice {
+	display: inline-block;
+	margin-bottom: 20px;
+}
+
+label.error {
+	color: darkred;
+}

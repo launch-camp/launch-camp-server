@@ -1,0 +1,163 @@
+/*color pallete http://paletton.com/#uid=3040u0kjQtna0Lmfm-onZq9rkl5*/
+
+body {
+
+}
+
+.section {
+	visibility: hidden;
+	position: relative;
+}
+
+.quarter-container {
+	position: relative;
+	top: 25%;
+  	transform: translateY(-25%);	
+}
+
+.centered-container {
+	position: relative;
+	top: 25%;
+  	transform: translateY(-25%);	
+}
+
+.intro-container {
+	background: #EDF9FB;  
+  	padding: 50px 20px 20px 20px;
+  	margin-bottom: 20px;
+  	/*border: 10px solid #EA6759;*/
+  	border-bottom: 5px solid #FF9185;
+  	border-top: 5px solid #FF9185;
+}
+
+.intro-line-1 {	
+	/*font-weight: 900;	*/
+	font-size: 50px;
+}
+
+.enroll {	
+	margin-top: 40px;	
+}
+
+.enroll-link {	
+	padding: 10px;
+	border-radius: 3px;
+	background: #5B9EAA;
+	color: white;	
+}
+
+.enroll-link:hover {
+	text-decoration: underline;
+	color: white;	
+}
+
+.overview-wrapper {	
+	text-align: center;
+}
+
+.program-overview {
+	margin-bottom: 60px
+}
+
+.overview-title {
+	color: #EC4B75;
+}
+
+.problem-intro {
+	background: #5B9EAA;
+	width: 100%;
+	color:white;
+	padding: 20px 0 20px 0; 
+	margin-top: 50px;
+	margin-bottom: 30px;
+	/*border-top: 2px solid black;*/
+}
+
+.problem {
+	margin-bottom: 30px;
+}
+
+.explanation-container {	
+	margin-bottom: 80px;	
+}
+
+.next-section {
+	position: absolute;
+	bottom: 10px;
+	width: 100%;
+}
+
+.next-section-arrow {
+	margin-bottom: 0px;
+}
+
+.explanation-section {
+	position: relative;
+}
+
+.skills-container h4 {
+	margin-bottom: 0;
+}
+
+.skills-container h3 {	
+	margin-top: 0;
+}
+
+.skill-header {
+	text-decoration: underline;
+	color: #EA6759;
+	font-weight: 700;
+}
+
+.skills-image {
+	height: 110px;
+	margin: 20px 0 20px 0;
+}
+
+.skills-wrapper {
+	/*border-top: 2px solid;*/
+	/*border-bottom: 2px solid;*/
+	background-color: #EDF9FB;
+	padding: 0px 0 50px 0;
+	margin-bottom: 80px;	
+	/*margin-top: 80px;*/
+}
+
+.long-term {
+	margin-top: 50px;
+	margin-bottom: 80px;
+}
+
+.enroll-wrapper {
+	/*background: #A5D852;*/
+	padding: 20px 0 20px 0;
+}
+
+.enroll-prompt {
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding: 20px 0 20px;
+	background: #C2EE7C;	
+}
+
+.enroll-container .enroll {
+	margin-top: 0px;	
+	/*background-color: #E1E2E4;*/	
+	padding: 20px 0 20px 0;
+}
+
+.enroll-container .enroll-link {	
+	display: inline-block;
+}
+
+.enroll-container {
+	margin-bottom: 80px;
+}
+
+/* to be used for img resizing */
+@media (max-device-width: 480px) { 
+	.intro-line-1 {	
+		font-weight: 900;	
+		font-size: 85px;
+	}
+}
