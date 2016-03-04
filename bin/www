@@ -15,20 +15,6 @@ var fs = require("fs");
 
 var port = normalizePort(process.env.PORT || '3000');
 app.set('port', port);
-
-if (process.env.ENV == "dev") {
-  // we only need to create our own https setup in dev. In production heroku takes care of things.
-  var https = require('https');
-  options = {
-    key: fs.readFileSync('dev_keys/server.key'),
-    cert: fs.readFileSync('dev_keys/server.crt'),
-    requestCert: false,
-    rejectUnauthorized: false
-  };  
-
-  var httpsServer = https.createServer(options, app);  
-  httpsServer.listen(4000);
-}
  
 /**
    * Create HTTP server.

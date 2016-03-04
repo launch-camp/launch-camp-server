@@ -12,10 +12,7 @@ var stripe = require("stripe")(stripeKey);
 /* GET home page. */
 router.post('/enroll', function(req, res, next) {
 	var enrollment = req.body.enrollment_data;
-	var stripeToken = req.body.token;
-
-	console.log("enrollment", enrollment);
-	console.log("token", stripeToken);
+	var stripeToken = req.body.token;	
 
 	stripe.customers.create({
 	  source: stripeToken.id,
@@ -27,8 +24,6 @@ router.post('/enroll', function(req, res, next) {
 			customer: customer.id
 		});
 	}).then(function(charge) {
-		console.log("charge", charge);
-
 		request({
 		  url: 'https://script.google.com/macros/s/AKfycbz1ThaaXXJk1Of3SmdR4pYVTcmWAj_qswmGLzUjpnZS3F7f19Pp/exec',	    
 		  method: 'POST',
