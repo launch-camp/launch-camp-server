@@ -11,7 +11,7 @@ $(function() {
 	})
 
 	var handler = StripeCheckout.configure({
-	    key: 'pk_test_BxqisMyL0ZKapZjhgfNpzHhr',
+	    key: 'pk_live_KEOmKcPh5aQq39FAOTGjNLfh',
 	    image: '/img/rocket.svg',
 	    name: "Launch Camp",
 	    locale: 'auto',
