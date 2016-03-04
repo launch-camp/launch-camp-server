@@ -22,7 +22,7 @@ router.post('/enroll', function(req, res, next) {
 	  description: enrollment.email
 	}).then(function(customer) {
 		return stripe.charges.create({
-			amount: 99900, // amount in cents, again
+			amount: 50, // amount in cents, again
 			currency: "usd",
 			customer: customer.id
 		});
@@ -33,7 +33,7 @@ router.post('/enroll', function(req, res, next) {
 		  url: 'https://script.google.com/macros/s/AKfycbz1ThaaXXJk1Of3SmdR4pYVTcmWAj_qswmGLzUjpnZS3F7f19Pp/exec',	    
 		  method: 'POST',
 		  //Lets post the following key/values as form
-		  form: _.extend(enrollment, {customer: charge.customer})
+		  form: _.extend(enrollment, {customer: charge.customer, charge: charge.id})
 		}, function(error, response, body){		  
 	      res.send(200)		  
 		}); 

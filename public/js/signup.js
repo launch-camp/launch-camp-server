@@ -1,4 +1,5 @@
 var selectedSession;
+var selectedSessionNumber;
 
 $(function() {
 	$(".session-choice").click(function(e) {
@@ -6,6 +7,7 @@ $(function() {
 		var clickedSession = $(e.target);
 		clickedSession.addClass("focus");
 		selectedSession = clickedSession.html();
+		selectedSessionNumber = clickedSession.data("number")
 	})
 
 	var handler = StripeCheckout.configure({
@@ -49,6 +51,8 @@ $(function() {
 		$(".application-form input").each(function(i, el) {
 			enrollmentData[el.name] = $(el).val();
 		})
+
+		enrollmentData["session-number"] = selectedSessionNumber;
 
 		$.ajax({
 			url: "/enroll",
