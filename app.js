@@ -4,6 +4,7 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var enforce = require('express-sslify');
 
 var routes = require('./routes/index');
 
@@ -54,5 +55,10 @@ app.use(function(err, req, res, next) {
   });
 });
 
+if (process.env.ENV !== "dev") {
+  console.log("serving only https");
+  // we need this to make sure all our pages are served over https
+  app.use(enforce.HTTPS({ trustProtoHeader: true }))  
+}
 
 module.exports = app;
