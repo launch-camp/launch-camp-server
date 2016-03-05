@@ -44,4 +44,19 @@
 	.bio-text {
 		margin-bottom: 40px;
 	}
+
+	.bio-text h3 {
+		display: none;
+	}
+
+	.bio-name {
+		font-size: 55px;
+	}
+
+	.profile-img {
+		max-height: 250px;
+		max-width: 245px;
+		margin-bottom: 30px;
+		margin-top: 10px;
+	}
 }

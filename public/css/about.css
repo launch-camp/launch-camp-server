@@ -57,3 +57,14 @@
 	padding: 10px; 
 	display: inline-block;
 }
+
+@media (max-device-width: 480px) { 	
+	.section-label {
+		text-decoration: underline;
+		text-align: center;
+	}	
+
+	.section-text {
+		text-align: center;
+	}
+}
