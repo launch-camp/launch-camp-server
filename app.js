@@ -10,6 +10,12 @@ var routes = require('./routes/index');
 
 var app = express();
 
+if (process.env.ENV !== "dev") {
+  console.log("serving only https");
+  // we need this to make sure all our pages are served over https
+  app.use(enforce.HTTPS({ trustProtoHeader: true }))  
+}
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
@@ -54,11 +60,5 @@ app.use(function(err, req, res, next) {
     error: {}
   });
 });
-
-if (process.env.ENV !== "dev") {
-  console.log("serving only https");
-  // we need this to make sure all our pages are served over https
-  app.use(enforce.HTTPS({ trustProtoHeader: true }))  
-}
 
 module.exports = app;
