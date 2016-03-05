@@ -13,7 +13,7 @@ var app = express();
 if (process.env.ENV !== "dev") {
   console.log("serving only https");
   // we need this to make sure all our pages are served over https
-  app.use(enforce.HTTPS({ trustProtoHeader: true }))  
+  // app.use(enforce.HTTPS({ trustProtoHeader: true }))  
 }
 
 // view engine setup
