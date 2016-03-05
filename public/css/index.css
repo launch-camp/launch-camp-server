@@ -23,7 +23,7 @@ body {
 
 .intro-container {
 	background: #EDF9FB;  
-  	padding: 50px 20px 20px 20px;
+  	padding: 20px 20px 20px 20px;
   	margin-bottom: 20px;
   	/*border: 10px solid #EA6759;*/
   	border-bottom: 5px solid #FF9185;
@@ -32,7 +32,7 @@ body {
 
 .intro-line-1 {	
 	/*font-weight: 900;	*/
-	font-size: 50px;
+	font-size: 40px;
 }
 
 .enroll {	
@@ -110,7 +110,7 @@ body {
 }
 
 .skills-image {
-	height: 110px;
+	height: 80px;
 	margin: 20px 0 20px 0;
 }
 
