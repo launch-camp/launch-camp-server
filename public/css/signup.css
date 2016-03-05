@@ -1,3 +1,9 @@
+.header-span {
+	padding: 10px;
+	background: #D8F5A9;
+	display: inline-block;
+}
+
 .success-text {
 	display: none;
 }
@@ -18,4 +24,8 @@
 
 label.error {
 	color: darkred;
+}
+
+.unenroll-text {
+	margin-top: 10px;
 }
