@@ -1,24 +1,25 @@
 /*color pallete http://paletton.com/#uid=3040u0kjQtna0Lmfm-onZq9rkl5*/
 
-body {
-
+#content {	
+	position: relative;	
 }
 
 .section {
-	visibility: hidden;
+	/*visibility: hidden;*/
 	position: relative;
 }
 
 .quarter-container {
-	position: relative;
+	margin-top: 40px;
+	/*position: relative;
 	top: 25%;
-  	transform: translateY(-25%);	
+  	transform: translateY(-25%);	*/
 }
 
 .centered-container {
-	position: relative;
+	/*position: relative;
 	top: 25%;
-  	transform: translateY(-25%);	
+  	transform: translateY(-25%);	*/
 }
 
 .intro-container {
@@ -32,7 +33,7 @@ body {
 
 .intro-line-1 {	
 	/*font-weight: 900;	*/
-	font-size: 40px;
+	/*font-size: 40px;*/
 }
 
 .enroll {	
@@ -64,17 +65,23 @@ body {
 }
 
 .problem-intro {
-	background: #5B9EAA;
-	width: 100%;
+	background: #5B9EAA;	
 	color:white;
-	padding: 20px 0 20px 0; 
-	margin-top: 50px;
-	margin-bottom: 30px;
+	padding: 20px 0 20px 0; 	
+	margin-bottom: 0px;
+	margin-top: 0px;
+	width: 100%;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
 	/*border-top: 2px solid black;*/
 }
 
 .problem {
 	margin-bottom: 30px;
+}
+
+.problem-followup {
+	padding: 0px 20px 0px 20px;
 }
 
 .explanation-container {	
@@ -92,7 +99,7 @@ body {
 }
 
 .explanation-section {
-	position: relative;
+	margin-top: 80px;
 }
 
 .skills-container h4 {
@@ -114,18 +121,20 @@ body {
 	margin: 20px 0 20px 0;
 }
 
-.skills-wrapper {
+.skills-container {
 	/*border-top: 2px solid;*/
 	/*border-bottom: 2px solid;*/
 	background-color: #EDF9FB;
-	padding: 0px 0 50px 0;
-	margin-bottom: 80px;	
+	padding: 10px 20px 20px 20px;
+	margin-bottom: 40px;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	overflow: hidden;
 	/*margin-top: 80px;*/
 }
 
-.long-term {
-	margin-top: 50px;
-	margin-bottom: 80px;
+.long-term {	
+	margin-bottom: 40px;
 }
 
 .enroll-wrapper {
@@ -135,8 +144,12 @@ body {
 
 .enroll-prompt {
 	margin-top: 0px;
-	margin-bottom: 0px;
-	padding: 20px 0 20px;
+	margin-bottom: 0px;	
+}
+
+.enroll-prompt-span {
+	display: inline-block;
+	padding: 10px;
 	background: #C2EE7C;	
 }
 
@@ -151,7 +164,7 @@ body {
 }
 
 .enroll-container {
-	margin-bottom: 80px;
+	padding-bottom: 80px;
 }
 
 /* to be used for img resizing */

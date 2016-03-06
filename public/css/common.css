@@ -1,5 +1,6 @@
 body {
 	font-family: Open Sans, Helvetica;			
+	position: relative;
 }
 
 h1, h2, h3, h4 {
@@ -69,14 +70,26 @@ h1, h2, h3, h4 {
 	display: none;	
 }
 
-.footer {
-	margin-top: 30px;	
+.footer {	
+	bottom: 0px;
+	position: absolute;
+	width: 100%;
+	padding: 0 10px 0 10px;
 }
 
-.connect {
+.connect-wrapper {
 	float: right;
 	margin: 0 0 0 0;
 	font-size: 40px;
+}
+
+.contact-wrapper {
+	float: left;
+}
+
+.connect {
+	margin-top: 0px;
+	margin-bottom: 0px;
 }
 
 .contact {
@@ -134,7 +147,7 @@ h1, h2, h3, h4 {
 		font-size: 50px;
 	}
 
-	.connect {
+	.connect-wrapper {
 		float: none;
 		font-size: 90px
 	}
@@ -152,6 +165,10 @@ h1, h2, h3, h4 {
 	}
 
 	.screen-only {
+		display: none;
+	}	
+
+	.contact {
 		display: none;
 	}
 }

@@ -9,6 +9,10 @@
 	margin-bottom: 30px;
 }
 
+.day-at-camp {
+	padding-bottom: 80px;
+}
+
 @media (max-device-width: 480px) { 
 	.snapshot h3 {
 		text-align: center;	
