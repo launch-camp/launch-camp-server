@@ -81,10 +81,12 @@ h1, h2, h3, h4 {
 	float: right;
 	margin: 0 0 0 0;
 	font-size: 40px;
+	display: none;
 }
 
 .contact-wrapper {
-	float: left;
+	/*float: left;*/
+	text-align: center;	
 }
 
 .connect {
@@ -149,6 +151,7 @@ h1, h2, h3, h4 {
 
 	.connect-wrapper {
 		float: none;
+		display: none;
 		font-size: 90px
 	}
 
