@@ -56,11 +56,83 @@
 
 <div class="signup-container container">
 	<div class="row header-row">
-		<div class="col-md-10 col-md-offset-1">
+		<div class="col-md-6 col-md-offset-3">
 			<h3 class="header text-center">
-				<span class="header-span">Launch Camp is $999 for each two week session. Students keep their profit. We enroll entering 9th-12th graders.</span>
+				<span class="header-span">Launch Camp is $999 / two week session.<br>Students keep their profit.<br>We enroll entering 9th-12th graders.</span>
 			</h3>
-			<h4 class="text-center">
+		</div>
+	</div>
+
+	<div class"row">
+		<div class="col-md-10 col-md-offset-1">
+			<div class="col-md-6">
+				<div class="col-md-11 col-md-offset-1 schedule-box">
+					<h3 class="box-header text-center">Schedule</h3>
+					<div class="row">
+						<h4 class="col-md-4">
+							8:30 AM
+						</h4>
+						<h4 class="col-md-8">
+							Dropoff	
+						</h4>
+					</div>
+
+					<div class="row">
+						<h4 class="col-md-4">
+							11:30 AM
+						</h4>
+						<h4 class="col-md-8">
+							Lunch (packed)	
+						</h4>
+					</div>
+
+					<div class="row">
+						<h4 class="col-md-4">
+							3:30 PM
+						</h4>
+						<h4 class="col-md-8">
+							Camp Pickup
+						</h4>
+					</div>
+
+					<div class="row">
+						<h4 class="col-md-4">
+							5:30 PM
+						</h4>
+						<h4 class="col-md-8">
+							"Crunch Time" Pickup
+						</h4>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-6">
+				<div class="col-md-11 crunch-time-box">				
+					<h3 class="box-header text-center">"Crunch Time" (Extended Hours)</h3>
+
+					<div class="row text-center">
+						<h4 class="col-md-12">
+							3:30 - 5:30 PM daily
+						</h4>				
+					</div>
+
+					<div class="row text-center">
+						<h4 class="col-md-12">
+							Unstructured time with access to equipment.
+						</h4>
+					</div>
+
+					<div class="row text-center">
+						<h4 class="col-md-12">
+							Additional $200/session or $30/day.<br>Check the box below or sign up day-of.
+						</h4>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+			<!-- <h4 class="text-center">
 				Camp dropoff opens at 8:30 AM and pickup is at 3:30 PM. We offer extended hours in the form of "Crunch Time" from 3:30 PM to 5:30 PM. Crunch Time costs an additional $30 per day or $200 per session. You can register for Crunch Time at the start of a session, or on the day you need it.
 			</h4>
 
@@ -70,27 +142,34 @@
 
 			<h4 class="text-center">
 				We'll reach out to confirm your registration and collect personal health info, emergency contacts and releases within a few days. If you'd like to be in touch sooner please email us at <a href="mailto:info@thelaunchcamp.com">info@thelaunchcamp.com</a> or call 240-603-2654.
-			</h4>
-		</div>
+			</h4> -->		
 	</div>
 	<div class="row">
-		<div class="col-md-10 col-md-offset-1 text-center">
+		<div class="col-md-8 col-md-offset-2 text-center">
 			<h4 class="error-text no-session">Please choose a session</h4>
 			<h3>Choose a session</h3>
-			<btn data-number="1" class="btn btn-info session-choice">6/20 - 7/1: Design Tech High School, Millbrae</btn>
-			<btn data-number="2" class="btn btn-info session-choice">7/11 - 7/22: Union Square, San Francisco</btn>
-			<btn data-number="3" class="btn btn-info session-choice">7/27 - 8/9: Cubberley Community Center, Palo Alto</btn>
+			<button data-number="1" class="btn btn-info session-choice">6/20 - 7/1: Design Tech High School, Millbrae</button>
+			<button data-number="2" class="btn btn-info session-choice">7/11 - 7/22: Union Square, San Francisco</button>
+			<button data-number="3" class="btn btn-info session-choice">7/27 - 8/9: Cubberley Community Center, Palo Alto</button>
 		</div>
 	</div>
 	<div class="row">
-		<div class="col-md-8 col-md-offset-2">
+		<div class="col-md-6 col-md-offset-3">
 			<div class="curtain">							
+				<h4 class="text-center checkbox">
+					<input class="crunch-time-checkbox" type="checkbox"/>Include "Crunch Time" extended hours (additional $200)
+				</h4>
 				<form class="application-form">										
 					<h4 class="text-center error-text info-error">You appear to have missing or incorrect fields, please correct this below.</h4>
 
 					<div class="form-group">
 	    				<label for="student-name">Student Name</label>
-	    				<input name="student-name" type="text" class="form-control" id="studen-name" placeholder="First and last name" required>
+	    				<input name="student-name" type="text" class="form-control" id="student-name" placeholder="First and last name" required>
+	  				</div>
+
+	  				<div class="form-group">
+	    				<label for="parent-name">Parent Name</label>
+	    				<input name="parent-name" type="text" class="form-control" id="parent-name" placeholder="First and last name" required>
 	  				</div>
 
 	  				<div class="form-group">
@@ -99,7 +178,7 @@
 	  				</div>
 
 					<div class="form-group">
-	    				<label for="grade">Student's grade level (in fall of 2016)</label>
+	    				<label for="grade">Student's Grade Level (in fall of 2016)</label>
 	    				<input name="grade" type="text" class="form-control" id="grade" placeholder="9th, 10th, 11th or 12th" required>
 	  				</div>
 

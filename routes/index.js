@@ -12,17 +12,24 @@ var stripe = require("stripe")(stripeKey);
 /* GET home page. */
 router.post('/enroll', function(req, res, next) {
 	var enrollment = req.body.enrollment_data;
-	var stripeToken = req.body.token;	
+	var stripeToken = req.body.token;		
+
+	var price; 	
+	if (req.body.enrollment_data["crunch-time"] === "true") {
+		price = 119900;
+	} else {
+		price = 99900
+	}
 
 	stripe.customers.create({
 	  source: stripeToken.id,
 	  description: enrollment.email
-	}).then(function(customer) {
+	}).then(function(customer) {		
 		return stripe.charges.create({
-			amount: 99900, // amount in cents, again
+			amount: price, // amount in cents, again
 			currency: "usd",
 			customer: customer.id
-		});
+		});				
 	}).then(function(charge) {
 		request({
 		  url: 'https://script.google.com/macros/s/AKfycbz1ThaaXXJk1Of3SmdR4pYVTcmWAj_qswmGLzUjpnZS3F7f19Pp/exec',	    

@@ -1,12 +1,37 @@
 .header-span {
 	padding: 10px;
-	background: #D8F5A9;
+	/*background: #D8F5A9;*/
+	background-color: #C2EE7C;
 	display: inline-block;
 }
 
 .header {
 	margin-top: 0px;
 	margin-bottom: 30px;
+}
+
+.schedule-box {
+	border: 2px solid #90C5CF;	
+}
+
+.crunch-time-box {
+	border: 2px solid #FF9185;
+}
+
+.box-header {
+	font-size:23px;
+}
+
+.crunch-time-btn, .crunch-time-btn:hover {
+	background: #C2EE7C;
+	color: black;
+	border: none;
+}
+
+.crunch-time-btn.focus, .crunch-time-btn.focus:hover {
+	background: #699B17;
+	color: white;
+	border: none;
 }
 
 .signup-container {
@@ -29,6 +54,8 @@
 .session-choice {
 	display: inline-block;
 	margin-bottom: 20px;
+	background: #90C5CF;
+	color: black;
 }
 
 label.error {
@@ -38,4 +65,17 @@ label.error {
 .unenroll-text {
 	margin-top: 10px;
 	padding-bottom: 80px;
+}
+
+@media (max-device-width : 768px)  { 
+	.schedule-box {	
+		text-align:center;
+		margin-bottom: 30px;
+	}		
+}
+
+@media (max-device-width: 480px) { 
+	.box-header {
+		font-size: 45px
+	}	
 }

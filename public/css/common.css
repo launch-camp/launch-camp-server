@@ -98,6 +98,12 @@ h1, h2, h3, h4 {
 	font-size: 16px;
 }
 
+@media only screen 
+and (min-device-width : 480px) 
+and (max-device-width : 1024px)  { 
+
+}
+
 @media (max-device-width: 480px) { 	
 	h1 {
 		font-size: 90px;

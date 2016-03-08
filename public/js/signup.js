@@ -12,6 +12,7 @@ $(function() {
 
 	var handler = StripeCheckout.configure({
 	    key: 'pk_live_KEOmKcPh5aQq39FAOTGjNLfh',
+	    // key: 'pk_test_BxqisMyL0ZKapZjhgfNpzHhr',
 	    image: '/img/rocket.svg',
 	    name: "Launch Camp",
 	    locale: 'auto',
@@ -33,14 +34,25 @@ $(function() {
 		} else if (!$(".application-form").valid()) {
 			$(".info-error").show();
 		} else {
+			var price;
+			if (crunchTimeSelected()) {
+				price = 119900;
+			} else {
+				price = 99900
+			}
+
 			handler.open({	     
 		      description: selectedSession,
-		      amount: 99900,
+		      amount: price,
 		      email: $("#email").val(),
 		      allowRememberMe: false
 		    });	
 		}	
 	})
+
+	function crunchTimeSelected() {
+		return $(".crunch-time-checkbox")[0].checked
+	}
 
 	function submitInfo(token) {
 		var application = $(".application-form")
@@ -53,6 +65,7 @@ $(function() {
 		})
 
 		enrollmentData["session-number"] = selectedSessionNumber;
+		enrollmentData["crunch-time"] = crunchTimeSelected();
 
 		$.ajax({
 			url: "/enroll",
@@ -61,6 +74,9 @@ $(function() {
 		}).then(function() {
 			// lock the height
 			application.css({height: application.height()});
+
+			// keeps the footer from being overlaid
+			$(".success-text").css("padding-bottom", "80px");
 
 			// then bring up the curtain
 			$(".curtain").animate({"height": 0}, {

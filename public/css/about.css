@@ -14,7 +14,7 @@
 
 .header-span {
 	padding: 10px;
-	background-color: #D8F5A9;
+	background-color: #C2EE7C;
 	border-radius: 5px;
 	display: inline-block;
 }
@@ -54,7 +54,12 @@
 	border: 2px solid #EA6759;
 	padding: 10px; 
 	display: inline-block;
-	padding-bottom: 
+	color: black;
+}
+
+.question-span:hover {
+	text-decoration: underline;
+	color: black;
 }
 
 @media (max-device-width: 480px) { 	
