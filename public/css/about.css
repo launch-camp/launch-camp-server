@@ -32,6 +32,10 @@
 	background: #90C5CF;
 }
 
+.section-label {
+	text-align: center;
+}
+
 .first-point {
 	margin-top: 0px;
 }
