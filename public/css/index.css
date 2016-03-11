@@ -17,27 +17,79 @@
 }
 
 .centered-container {
-	/*position: relative;
-	top: 25%;
-  	transform: translateY(-25%);	*/
+	position: relative;
+	top: 50%;
+  	transform: translateY(-50%);	
+}
+
+.intro {
+	padding: 100px 0 100px 0;
+	position: relative;
+	height: 400px;
+	overflow: hidden;
 }
 
 .intro-container {
 	background: #EDF9FB;  
-  	padding: 20px 20px 20px 20px;
+  	/*padding: 10px 0px 10px 0px;*/
   	margin-bottom: 20px;
   	/*border: 10px solid #EA6759;*/
   	border-bottom: 5px solid #FF9185;
-  	border-top: 5px solid #FF9185;
+  	border-top: 5px solid #FF9185;  	
+}
+
+.intro-text {
+	position: relative;
+	z-index: 200;
+	color: #404040;
+	/*height: 100%;*/	
+	font-family: "Josefin Sans";
 }
 
 .intro-line-1 {	
-	/*font-weight: 900;	*/
-	/*font-size: 40px;*/
+	font-weight: 900;	
+	font-size: 45px;
+	margin-top: 0px;	
+	/*position: absolute;	*/
+	top: 0px;
+	/*width: 100%;*/
+	padding-top: 10px;
+}
+
+.intro-line-2 {
+	font-weight: 900;
+	font-size: 60px;
+}
+
+.intro-line-3 {
+	font-weight: 900;
+	font-size: 30px;
+	/*position: absolute;	*/
+	 bottom: 0px;	
+	 /*width: 100%;*/
+	 padding-bottom: 10px;
+}
+
+.banner-img {	
+	width: 100%;	
+	z-index: 0;
+	position: absolute;
+	top: 0px;
+}
+
+.banner-img-overlay {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	z-index: 100;
+	background: rgba(237, 249, 251, .75);
+	top: 0px;
 }
 
 .enroll {	
-	margin-top: 40px;	
+	margin-top: 40px;
+	display: inline;	
+	text-align: left;
 }
 
 .enroll-link {	
@@ -45,6 +97,9 @@
 	border-radius: 3px;
 	background: #5B9EAA;
 	color: white;	
+	margin-left: 10px;
+	font-size: 24px;
+	border: 2px solid white;
 }
 
 .enroll-link:hover {
@@ -88,11 +143,36 @@
 	margin-bottom: 80px;	
 }
 
-.next-section {
-	position: absolute;
-	bottom: 10px;
+/*.skill-headers {
+	margin-bottom: 20px
+*/}
+
+/*.skill-img-frame {
+	overflow: hidden;
+	height: 300px;
+	position: relative;
+*/}
+
+/*.skill-img {
 	width: 100%;
+	position: relative;
+	z-index: 0;		
 }
+
+.skill-text {
+	position: absolute;
+	top:0px;
+	z-index: 1000;
+}
+
+.skill-img-overlay {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	z-index: 100;
+	background: rgba(237, 249, 251, .75);
+	top: 0px;
+}*/
 
 .next-section-arrow {
 	margin-bottom: 0px;
@@ -106,7 +186,7 @@
 	margin-bottom: 0;
 }
 
-.skills-container h3 {	
+.skill-header {	
 	margin-top: 0;
 }
 
@@ -159,7 +239,7 @@
 	padding: 20px 0 20px 0;
 }
 
-.enroll-container .enroll-link {	
+.enroll-link {	
 	display: inline-block;
 }
 
@@ -169,8 +249,35 @@
 
 /* to be used for img resizing */
 @media (max-device-width: 480px) { 
-	.intro-line-1 {	
-		font-weight: 900;	
-		font-size: 85px;
+	.intro-text {
+		padding: 40px 0 40px 0; 
+	}
+
+	.intro-line-1 {			
+		font-size: 70px;
+	}	
+
+	.intro-line-2{			
+		font-size: 90px;
+	}	
+
+	.intro-line-3 {			
+		font-size: 60px;
+	}	
+
+	.intro {
+		height: 600px;
+	}
+
+	.skills-image {
+		height: 200px;
+	}
+
+	.skill-header {
+		margin-top: 100px;
+	}	
+
+	.enroll-link {		
+		font-size: 80px;
 	}
 }

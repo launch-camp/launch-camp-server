@@ -1,5 +1,5 @@
 body {
-	font-family: Open Sans, Helvetica;			
+	font-family: Open Sans, Helvetica;				
 	position: relative;
 }
 
@@ -11,7 +11,7 @@ h1, h2, h3, h4 {
 	display: none
 }
 
-.topbar {	
+.topbar {		
 	padding: 30px 55px 0px 55px; 
 }
 
@@ -134,7 +134,7 @@ and (max-device-width : 1024px)  {
 		font-size: 30px;
 	}
 
-	.nav-links {
+	.nav-links {		
 		display: none;
 	}
 
