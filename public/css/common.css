@@ -106,10 +106,14 @@ h1, h2, h3, h4 {
 	font-size: 16px;
 }
 
-@media only screen 
-and (min-device-width : 480px) 
-and (max-device-width : 1024px)  { 
+@media (max-device-width : 768px)  { 
+	.mobile-only {
+		display: block
+	}
 
+	.screen-only {
+		display: none;
+	}	
 }
 
 @media (max-device-width: 480px) { 	
@@ -176,14 +180,6 @@ and (max-device-width : 1024px)  {
 	.footer {
 		text-align: center;
 	}
-
-	.mobile-only {
-		display: block
-	}
-
-	.screen-only {
-		display: none;
-	}	
 
 	.contact {
 		display: none;

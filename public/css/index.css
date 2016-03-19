@@ -164,6 +164,10 @@
 	height: 70px;
 }
 
+.mobile-only .olin-logo {
+	margin-right: 40px;
+}
+
 .launch-camp-logo {
 	height: 100px;
 }
@@ -173,7 +177,6 @@
 	flex-direction: column;
 	justify-content: center;
 }*/
-
 
 .resource-top-header-span {
 	background: #5B9EAA;
