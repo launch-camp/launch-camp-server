@@ -35,11 +35,18 @@ $(function() {
 			$(".info-error").show();
 		} else {
 			var price;
-			if (crunchTimeSelected()) {
-				price = 119900;
+
+			var couponCode = $("#coupon-code").val()
+			if (couponCode) {
+				if (couponCode === "CUBB") {
+					price = 100000
+				} else {
+					$(".coupon-error").show();	
+					return 
+				}
 			} else {
-				price = 99900
-			}
+				price = 120000
+			}			
 
 			handler.open({	     
 		      description: selectedSession,
@@ -49,10 +56,6 @@ $(function() {
 		    });	
 		}	
 	})
-
-	function crunchTimeSelected() {
-		return $(".crunch-time-checkbox")[0].checked
-	}
 
 	function submitInfo(token) {
 		var application = $(".application-form")
@@ -64,8 +67,7 @@ $(function() {
 			enrollmentData[el.name] = $(el).val();
 		})
 
-		enrollmentData["session-number"] = selectedSessionNumber;
-		enrollmentData["crunch-time"] = crunchTimeSelected();
+		enrollmentData["session-number"] = selectedSessionNumber;		
 
 		$.ajax({
 			url: "/enroll",

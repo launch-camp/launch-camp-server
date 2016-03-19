@@ -98,7 +98,7 @@
 	background: #5B9EAA;
 	color: white;	
 	margin-left: 10px;
-	font-size: 24px;
+	font-size: 20px;
 	border: 2px solid white;
 }
 
@@ -119,16 +119,19 @@
 	color: #EC4B75;
 }
 
-.problem-intro {
-	background: #5B9EAA;	
-	color:white;
-	padding: 20px 0 20px 0; 	
-	margin-bottom: 0px;
-	margin-top: 0px;
-	width: 100%;
-	border-top-left-radius: 10px;
-	border-top-right-radius: 10px;
+.problem-intro {	
+	margin-bottom: 50px;
+	margin-top: 40px;	
+	/*border-top-left-radius: 10px;*/
+	/*border-top-right-radius: 10px;*/
 	/*border-top: 2px solid black;*/
+}
+
+.problem-intro-span {
+	background: #5B9EAA;
+	padding: 10px; 
+	color:white;	
+	display: inline-block;		
 }
 
 .problem {
@@ -139,48 +142,90 @@
 	padding: 0px 20px 0px 20px;
 }
 
-.explanation-container {	
-	margin-bottom: 80px;	
+.problem-logo-container img {
+	display: inline-block	
 }
 
-/*.skill-headers {
-	margin-bottom: 20px
-*/}
-
-/*.skill-img-frame {
-	overflow: hidden;
-	height: 300px;
-	position: relative;
-*/}
-
-/*.skill-img {
-	width: 100%;
-	position: relative;
-	z-index: 0;		
+.problem-logo-container {
+	padding: 20px 0px 20px 0;
+	margin-top: 0px;
+	margin-bottom: 0px;
 }
 
-.skill-text {
-	position: absolute;
-	top:0px;
-	z-index: 1000;
+.explanation-section .row {
+	margin-bottom: 25px;
 }
 
-.skill-img-overlay {
-	position: absolute;
-	height: 100%;
-	width: 100%;
-	z-index: 100;
-	background: rgba(237, 249, 251, .75);
-	top: 0px;
+.dtech-logo {
+	height: 70px;		
+}
+
+.olin-logo {
+	height: 70px;
+}
+
+.launch-camp-logo {
+	height: 100px;
+}
+
+/*.problem-text-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }*/
+
+
+.resource-top-header-span {
+	background: #5B9EAA;
+	color: white;
+	padding: 10px;
+}
+
+.resource-header-row {
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+
+.resource-header-span {
+	border: 2px solid #FF9185;
+	padding: 8px;
+}
+
+.printer-img {
+	height: 90px;	
+}
+
+.laser-cutter-img {
+	height: 80px;
+}
+
+.computer-img {
+	height: 80px;
+}
+
+.plus-img {
+	font-size: 100px;
+	position: relative;
+	top: -100px;
+}
+
+.profile-img {
+	max-height: 90px;
+	max-width: 90px;
+	border-radius: 50%;
+	position: relative;
+	display: inline-block;  	
+}
 
 .next-section-arrow {
 	margin-bottom: 0px;
 }
 
-.explanation-section {
-	margin-top: 80px;
+.results-header-row {
+	margin-top: 20px;
+	margin-bottom: 40px;
 }
+
 
 .skills-container h4 {
 	margin-bottom: 0;
@@ -192,8 +237,8 @@
 
 .skill-header {
 	text-decoration: underline;
-	color: #EA6759;
-	font-weight: 700;
+	/*color: #EA6759;*/
+	/*font-weight: 700;*/
 }
 
 .skills-image {
@@ -204,7 +249,7 @@
 .skills-container {
 	/*border-top: 2px solid;*/
 	/*border-bottom: 2px solid;*/
-	background-color: #EDF9FB;
+	/*background-color: #EDF9FB;*/
 	padding: 10px 20px 20px 20px;
 	margin-bottom: 40px;
 	border-bottom-right-radius: 10px;

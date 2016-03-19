@@ -3,6 +3,14 @@ body {
 	position: relative;
 }
 
+h4 {
+	font-size: 16px;
+}
+
+h3 {
+	font-size: 20px;
+}
+
 h1, h2, h3, h4 {
 	line-height: 1.3
 }

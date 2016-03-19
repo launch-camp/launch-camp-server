@@ -1,13 +1,35 @@
-function setContentHeight() {	
-	var viewportHeight = window.innerHeight;	
-	document.getElementById("section-1").style.height = viewportHeight;		
-	// document.getElementById("section-2").style.height = viewportHeight;
+$(function(){
+	var olinDtechConnector = jsPlumb.getInstance();
+	olinDtechConnector.setContainer($(".explanation-section"));
 
-	var sections = document.getElementsByClassName("section");
-	for (i = 0; i < sections.length; i ++)  {		
-		sections[i].style.visibility = "visible";
-	}
-}
+	var dtechLaunchCampConnector = jsPlumb.getInstance();
+	dtechLaunchCampConnector.setContainer($(".explanation-section"));
 
-// window.onresize = setContentHeight;
-// window.onload = setContentHeight;
+	olinDtechConnector.importDefaults({
+		Connector:[ "Flowchart"],
+		Anchors : [ "Bottom", "Top" ],
+		Endpoint: "Blank",
+		EndpointStyle : { fillStyle: "#567567"  },
+		PaintStyle: { strokeStyle: "#FF9185", lineWidth: 5 }
+		// Anchor : [ 0.5, 0.5, 1, 1 ]
+	});
+
+	dtechLaunchCampConnector.importDefaults({
+		Connector:[ "Flowchart"],
+		Anchors : [ "Bottom", "Top" ],
+		Endpoint: "Blank",
+		EndpointStyle : { fillStyle: "#567567"  },
+		PaintStyle: { strokeStyle: "#FF9185", lineWidth: 5 }
+		// Anchor : [ 0.5, 0.5, 1, 1 ]
+	});
+
+	olinDtechConnector.connect({
+		source:"olin-logo-container",
+		target:"dtech-logo-container"
+	});	
+
+	dtechLaunchCampConnector.connect({
+		source:"dtech-logo-container",
+		target:"launch-camp-logo-container"
+	});	
+})

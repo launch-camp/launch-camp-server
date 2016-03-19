@@ -7,6 +7,7 @@
 	<link rel="stylesheet" type="text/css" href="css/index.css"></link>	
 	<link rel="stylesheet" type="text/css" href="css/common.css"></link>	
 	<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css"></link>	
+	<script type="text/javascript" src="js/jsPlumb-2.0.4.js"></script>
 	<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
 	<script type="text/javascript" src="js/index.js"></script>
 	<script type="text/javascript" src="js/common.js"></script>
@@ -79,95 +80,155 @@
 					<span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>					
 				</h1>			
 			</div> -->
-		</div>				
-
-		<div class="section explanation-section container" id="section-2">					
-			<div class=" ">				
+		</div>						
+		<div class="container explanation-section">
+			<div class="row">
 				<h3 class="problem-intro text-center">
-					We believe every young person should found a business.
+					<span class="problem-intro-span">We believe every young person should found a business.</span>
 				</h3>					
-				<h4>
-					Through the the <a href="http://twoweekbusiness.com">Two Week Business</a> course we've helped nearly 50 9th and 10th graders create profitable businesses. 
+				<h4 class="col-md-3 col-md-offset-1 text-center problem-text-container">
+					<div>Last year, we turned an Olin College of Engineering course into a two week intersession at Design Tech High School.</div>
 				</h4>
+				<h4 class="problem-logo-container col-md-2 text-center" id="olin-logo-container">
+					<img class="olin-logo" src="img/olin-logo-cropped.png">
+				</h4> 
+			</div>
 
-				<div class="skills-container">					
-					<div class="row problem">
-						<div class="col-md-8 col-md-offset-2 text-center">						
-							<h4 class="problem-followup">
-								Entrepreneurship turns passion into profit and builds the skills that research shows are most important for college and beyond.
-							</h4>						
+			<div class="row">				
+				<h4 class="problem-logo-container col-md-2 col-md-offset-6 text-center" id=dtech-logo-container>
+					<img class="dtech-logo" src="img/dtech-logo.png">					
+				</h4>				
+				<h4 class="col-md-3 text-center problem-text-container">
+					<div>The class, <a href="http://twoweekbusiness.com">Two Week Business</a>, helps thirty 9th and 10th graders turn their passion into profit each year.</div>
+				</h4>				
+			</div>
+
+			<div class="row">		
+				<h4 class="col-md-3 col-md-offset-1 text-center problem-text-container">					
+					<div>Launch Camp expands the course into an 80 hour intensive experience, designed to help students achieve more ambitious results.</div>
+				</h4>	
+				<h4 class="problem-logo-container col-md-2 text-center" id=launch-camp-logo-container>
+					<img class="launch-camp-logo" src="img/rocket.svg">					
+				</h4>								
+			</div>
+		</div>
+
+		<div class="container resources">
+			<div class="row resource-header-row">
+				<h3 class="col-md-8 col-md-offset-2 text-center">
+					<span class="resource-top-header-span">We provide:</span>					
+				</h3>				
+			</div>
+
+			<div class="row resource-header-row">					
+				<h4 class="col-md-4 col-md-offset-1 text-center">
+					<span class="resource-header-span">World class coaches</span>					
+				</h4>				
+
+				<h4 class="col-md-4 col-md-offset-2 text-center">
+					<span class="resource-header-span">Top of the line equipment</span>					
+				</h4>				
+			</div>
+
+			<div class="row img-row">
+				<div class="row">
+
+					<div class="col-md-4 col-md-offset-1 text-center">
+						<div class="col-md-6">
+							<img class="profile-img" src="img/catherine.png"/>
+						</div>
+						
+						<div class="col-md-6">
+							<img class="profile-img" src="img/david-profile.png"/>
 						</div>					
 					</div>
 
-				<!-- 	<div class="row skill-headers text-center">				
-						<h3 class="col-md-3 skill-header">
-							Grit
-						</h3>
+					<div class="col-md-4 col-md-offset-2 text-center">
+						<div class="col-md-6">
+							<img class="resource-image laser-cutter-img" src="img/laser-cutter.png"/>	
+						</div>
+						
+						<div class="col-md-6">
+							<img class="resource-image printer-img" src="img/3d-printer.png"/>	
+						</div>					
+					</div>				
 
-						<h3 class="col-md-3 skill-header">
-							Teamwork
-						</h3>
+				</div>				
 
-						<h3 class="col-md-3 skill-header">
-							Resourcefulness
-						</h3>
+				<div class="row">
 
-						<h3 class="col-md-3 skill-header">
-							Confidence
-						</h3>
-					</div> -->
+					<div class="col-md-4 col-md-offset-1 text-center">										
+						<img class="profile-img" src="img/Tommy.jpg"/>
+					</div>			
 
-					<!-- <div class="skill-img-frame">
-						<img class="skill-img" src="img/laser_cutter_students.jpg"/>									
-						<div class="skill-img-overlay"></div>
-						<h3 class="skill-text">Most students' ideas won't work at first, but by the end of the two weeks they'll have one which is profitable.</h3>
-					</div> -->
+					<div class="plus-img col-md-2 text-center">
+						+
+					</div>		
 
-					<div class="row">
-						<div class="col-md-3 text-center">
+					<div class="col-md-4 text-center">										
+						<img class="resource-image computer-img" src="img/computer.jpg"/>
+					</div>					
+
+				</div>				
+			</div>			
+							
+		</div>
+
+		<div class="row results-header-row">
+			<h4 class="col-md-8 col-md-offset-2 text-center">
+				<span class="resource-header-span">to produce results that go way beyond profit.</span>					
+			</h4>				
+		</div>
+
+		<div class="section skills-section container" id="section-2">								
+			<div class="skills-container">										
+				<div class="row">
+					<div class="col-md-10 col-md-offset-1">
+						<div class="col-md-4 text-center">
 							<h3 class="skill-header">
 								Grit
 							</h3>
 							<img class="skills-image" src="img/grit.svg" />
-							<h4>
+							<!-- <h4>
 								Students' ideas won't work at first, but by the end of the two weeks they'll have one which is profitable.
-							</h4>
+							</h4> -->
 						</div>
 
 						
-						<div class="col-md-3 text-center">
+						<div class="col-md-4 text-center">
 							<h3 class="skill-header">
 								Teamwork
 							</h3>
 							<img class="skills-image" src="img/teamwork.svg" />
-							<h4>
+							<!-- <h4>
 								Students ideate, prototype, market and sell all as a team.
-							</h4>
+							</h4> -->
 						</div>
 
-						<div class="col-md-3 text-center">
+						<div class="col-md-4 text-center">
 							<h3 class="skill-header">
 								Resourcefulness
 							</h3>
 							<img class="skills-image" src="img/resourcefulness.svg" />
-							<h4>
+							<!-- <h4>
 								Students will discover how to use their resources - including their own passions - to create value.
-							</h4>
-						</div>
-
-						<div class="col-md-3 text-center">
-							<h3 class="skill-header">
-								Confidence
-							</h3>
-							<img class="skills-image" src="img/confidence.svg" />
-							<h4>
-								Most students don't think they can make $500 in two weeks, we show them they can.
-							</h4>
+							</h4> -->
 						</div>
 					</div>
+
+					<!-- <div class="col-md-3 text-center">
+						<h3 class="skill-header">
+							Confidence
+						</h3>
+						<img class="skills-image" src="img/confidence.svg" />
+						<h4>
+							Most students don't think they can make $500 in two weeks, we show them they can.
+						</h4>
+					</div> -->
 				</div>
-			</div>
+			</div>			
 		</div>
+
 		<div class="section">
 			<div class="container long-term text-center">
 				<div class="row">
@@ -176,7 +237,7 @@
 							A session lasts two weeks, the network lasts forever.
 						</h3>
 						<h4 class="col-md-10 col-md-offset-1">
-							We help Launch Camp graduates leverage their entrepreneurial experience in high school, college and beyond.
+							We support Launch Camp graduates as they grow their businesses, apply for college and stay connected with friends from their cohort.
 						</h4>
 					</div>				
 				</div>

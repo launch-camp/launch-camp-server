@@ -5,9 +5,15 @@
 	display: inline-block;
 }
 
-.header {
-	margin-top: 0px;
+.enroll-now {
+	margin-top: 10px;
 	margin-bottom: 30px;
+}
+
+.enroll-now-span {
+	background: #FF9185;
+	padding: 10px;
+	display: inline-block;
 }
 
 .schedule-box {
@@ -34,6 +40,14 @@
 	border: none;
 }
 
+.call-row {
+	margin-top: 20px;
+}
+
+.session-row {
+	margin-bottom: 20px;
+}
+
 .signup-container {
 	margin-top: 30px;
 }
@@ -50,6 +64,7 @@
 .curtain {
 	overflow: hidden;
 }
+
 
 .session-choice {
 	display: inline-block;

@@ -15,10 +15,11 @@ router.post('/enroll', function(req, res, next) {
 	var stripeToken = req.body.token;		
 
 	var price; 	
-	if (req.body.enrollment_data["crunch-time"] === "true") {
-		price = 119900;
+	
+	if (req.body.enrollment_data["coupon-code"] === "CUBB") {
+		price = 100000;
 	} else {
-		price = 99900
+		price = 120000
 	}
 
 	stripe.customers.create({
