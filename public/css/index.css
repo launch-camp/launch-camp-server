@@ -266,18 +266,22 @@
 
 .enroll-wrapper {
 	/*background: #A5D852;*/
-	padding: 20px 0 20px 0;
+	padding: 20px 0 20px 0;	
 }
 
 .enroll-prompt {
 	margin-top: 0px;
-	margin-bottom: 0px;	
+	margin-bottom: 0px;		
 }
 
 .enroll-prompt-span {
 	display: inline-block;
 	padding: 10px;
 	background: #C2EE7C;	
+}
+
+.enroll-wrapper h4 {
+	margin-top: 0px;	
 }
 
 .enroll-container .enroll {
