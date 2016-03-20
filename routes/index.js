@@ -15,8 +15,8 @@ router.post('/enroll', function(req, res, next) {
 	var stripeToken = req.body.token;		
 
 	var price; 	
-	
-	if (req.body.enrollment_data["coupon-code"] === "CUBB") {
+
+	if (req.body.enrollment_data["coupon-code"].toLowerCase() === "cubb") {
 		price = 100000;
 	} else {
 		price = 120000

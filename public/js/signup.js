@@ -11,8 +11,8 @@ $(function() {
 	})
 
 	var handler = StripeCheckout.configure({
-	    key: 'pk_live_KEOmKcPh5aQq39FAOTGjNLfh',
-	    // key: 'pk_test_BxqisMyL0ZKapZjhgfNpzHhr',
+	    // key: 'pk_live_KEOmKcPh5aQq39FAOTGjNLfh',
+	    key: 'pk_test_BxqisMyL0ZKapZjhgfNpzHhr',
 	    image: '/img/rocket.svg',
 	    name: "Launch Camp",
 	    locale: 'auto',
@@ -38,7 +38,7 @@ $(function() {
 
 			var couponCode = $("#coupon-code").val()
 			if (couponCode) {
-				if (couponCode === "CUBB") {
+				if (couponCode.toLowerCase() === "cubb") {
 					price = 100000
 				} else {
 					$(".coupon-error").show();	
@@ -73,21 +73,11 @@ $(function() {
 			url: "/enroll",
 			method: "POST",			
 			data: {enrollment_data: enrollmentData, token: token}
-		}).then(function() {
-			// lock the height
-			application.css({height: application.height()});
-
-			// keeps the footer from being overlaid
-			$(".success-text").css("padding-bottom", "80px");
-
-			// then bring up the curtain
-			$(".curtain").animate({"height": 0}, {
-				duration: 500,
-				complete: function() {
-					$(".success-text").show();
-					$(".submit-application").addClass("btn-success").html("Success");
-				} 
-			})				
+		}).then(function() {			
+			$(".overlay").css("z-index", "200");
+			$(".overlay").animate({"opacity": "1"}, {
+				duration: 500
+			});
 			return
 		}).fail(function(resp) {
 			$(".submit-application").removeClass("btn-warning").addClass("btn-primary").val("Proceed to Payment");	
