@@ -10,9 +10,15 @@ $(function() {
 		selectedSessionNumber = clickedSession.data("number")
 	})
 
+	var key;
+	if (location.host.indexOf("localhost") > -1) {
+		var key = 'pk_test_BxqisMyL0ZKapZjhgfNpzHhr'
+	} else {
+		var key = 'pk_live_KEOmKcPh5aQq39FAOTGjNLfh'
+	}
+
 	var handler = StripeCheckout.configure({
-	    key: 'pk_live_KEOmKcPh5aQq39FAOTGjNLfh',
-	    // key: 'pk_test_BxqisMyL0ZKapZjhgfNpzHhr',
+	    key: key,	    
 	    image: '/img/rocket.svg',
 	    name: "Launch Camp",
 	    locale: 'auto',
