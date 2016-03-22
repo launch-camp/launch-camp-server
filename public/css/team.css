@@ -3,7 +3,7 @@
 }
 
 .team-intro-span {
-	background: #FF9185;
+	background-color: #C2EE7C;
 	padding: 10px;
 	display: inline-block;
 }
@@ -13,9 +13,6 @@
 	padding-bottom: 80px;	
 }
 
-.coaches-row {
-	margin-top: 30px;
-}
 
 .profile-img {
 	max-height: 180px;
