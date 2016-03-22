@@ -203,10 +203,10 @@
 	height: 80px;
 }
 
-.plus-img {
-	font-size: 100px;
+.plus {
+	font-size: 40px;
 	position: relative;
-	top: -100px;
+	/*top: -50px;*/
 }
 
 .profile-img {
@@ -237,27 +237,27 @@
 	margin-bottom: 40px;
 }
 */
-.skills-container .row {
-	margin-top: 10px;	
+
+.skills-container .row-1 {
+	margin-bottom: 35px;	
 }
 
 .skills-container h4 {
 	margin-bottom: 0;
 }
 
-.skill-header {	
+.skill-header, .skill-footer {	
 	margin-top: 0;
+	margin-bottom: 0;
 }
 
 .skill-header {
-	text-decoration: underline;
-	/*color: #EA6759;*/
-	/*font-weight: 700;*/
+	font-weight: bold;	
 }
 
-.skills-image {
-	height: 60px;
-	margin: 20px 0 20px 0;
+.results-img {
+	height: 75px;
+	margin: 15px 0 0px 0;
 }
 
 .long-term {	
