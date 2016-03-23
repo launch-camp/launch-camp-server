@@ -3,6 +3,7 @@
 	/*background: #D8F5A9;*/
 	background-color: #C2EE7C;
 	display: inline-block;
+	border-radius: 5px;
 }
 
 .enroll-now {
@@ -21,6 +22,7 @@
 .enroll-now-span {
 	background: #FF9185;
 	padding: 10px;
+	border-radius: 5px;
 	display: inline-block;
 }
 
