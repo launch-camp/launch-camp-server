@@ -53,13 +53,17 @@
 	margin-top: 10px;
 }
 
+.quote {
+	font-style: italic;	
+	text-align: center;
+}
+
 .dont-quit-container {
 	/*background-color: #FFB7AF;*/		
-	margin-top: 25px;
 	padding-bottom: 80px; 
 }
 
-.dont-quite-container h2 {
+.dont-quit-container h2 {
 	margin: 0 0 0 0;	
 }
 
