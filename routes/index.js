@@ -26,7 +26,7 @@ router.post('/enroll', function(req, res, next) {
 	  email: email
 	}).then(function(customer) {		
 		return stripe.charges.create({
-			amount: 50, // amount in cents, again
+			amount: price, // amount in cents, again
 			currency: "usd",
 			customer: customer.id
 		});				
