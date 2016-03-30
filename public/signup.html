@@ -149,79 +149,68 @@
 	</div>
 
 	<div class="row session-row">
-		<div class="col-md-8 col-md-offset-2 text-center">
-			<h4 class="error-text no-session">Please choose a session</h4>
+		<div class="col-md-8 col-md-offset-2 text-center">			
 			<h3>Choose a session</h3>
 			<button data-number="1" class="btn btn-info session-choice">6/20 - 7/1: Design Tech High School, Millbrae</button>
 			<button data-number="2" class="btn btn-info session-choice">7/11 - 7/22: Union Square, San Francisco</button>
 			<button data-number="3" class="btn btn-info session-choice">7/27 - 8/9: Cubberley Community Center, Palo Alto</button>
+			<h4 class="error-text no-session">Please choose a session</h4>
 		</div>
 	</div>
 	<div class="row">
 		<div class="col-md-8 col-md-offset-2">
-			<div class="curtain">							
+			<div class="curtain">	
 				<!-- <h4 class="text-center checkbox">
 					<input class="crunch-time-checkbox" type="checkbox"/>Include "Crunch Time" extended hours (additional $200)
 				</h4> -->
-				<form class="application-form">										
+				<form class="application-form" action="/confirmation" method="POST">										
 					<h4 class="text-center error-text info-error">You appear to have missing or incorrect fields, please correct this below.</h4>
-					<h4 class="text-center error-text coupon-error">Coupon code invalid, please check spelling or remove.</h4>
+					<h4 class="text-center error-text coupon-error">Coupon code invalid, please check spelling or remove.</h4>					
+
+					<input id="session-number" type="hidden" name="Session" />
 
 					<div class="form-group">
 	    				<label for="student-name">Participant Name</label>
-	    				<input name="student-name" type="text" class="form-control" id="student-name" placeholder="First and last name" required>
+	    				<input name="Participant Name" type="text" class="form-control" id="student-name" placeholder="First and last name" required>
 	  				</div>
 
 	  				<div class="form-group">
 	    				<label for="parent-name">Parent Name</label>
-	    				<input name="parent-name" type="text" class="form-control" id="parent-name" placeholder="First and last name" required>
+	    				<input name="Parent Name" type="text" class="form-control" id="parent-name" placeholder="First and last name" required>
 	  				</div>
 
 	  				<div class="form-group">
 	    				<label for="email">Parent Email</label>
-	    				<input name="email" type="email" class="form-control" id="email" placeholder="Email" required>
+	    				<input name="Parent Email" type="email" class="form-control" id="email" placeholder="Email" required>
 	  				</div>
 
 					<div class="form-group">
 	    				<label for="grade">Participant's Grade Level (in fall of 2016)</label>
-	    				<input name="grade" type="text" class="form-control" id="grade" placeholder="9th, 10th, 11th or 12th" required>
+	    				<input name="Participant Grade Level" type="text" class="form-control" id="grade" placeholder="9th, 10th, 11th or 12th" required>
 	  				</div>
 
 	  				<div class="form-group">
 	    				<label for="blurb">In a few sentences tell us about the participant's interests, academic and otherwise.</label>
-	    				<textarea name="blurb" class="form-control" id="blurb" required></textarea>
+	    				<textarea name="Participant Info" class="form-control" id="blurb" required></textarea>
 	  				</div>
 
 	  				<div class="form-group">
 	    				<label for="notes">Anything else you would like us to know?</label>
-	    				<textarea name="notes" class="form-control" id="notes"></textarea>
+	    				<textarea name="Notes" class="form-control" id="notes"></textarea>
 	  				</div>	 
 
 	  				<div class="form-group">
 	    				<label for="coupon-code">Discount Code</label>
-	    				<input type="text" name="coupon-code" class="form-control" id="coupon-code"></textarea>
+	    				<input name="Discount Code" type="text" name="coupon-code" class="form-control" id="coupon-code"></textarea>
 	  				</div>	 
-
-	  				<h4 class="error-text payment-error text-center">
-						Sorry, something went wrong.
-					</h4> 													
 
 	  				<div class="text-center">
 						<btn class="submit-application btn btn-primary">Proceed to Payment</btn>									
-					</div>	
-					<div class="unenroll-text text-center">
-						You can unenroll before June 1st 2016, for a full refund.
-					</div>
+					</div>						
 					<div class="col-md-12 text-center last-item">
 						Following registration you'll receive additional forms for health info, emergency contacts and releases.
 					</div>					
-  				</form>	  
-
-  				<div class="overlay text-center">
-  					<h4>
-  						Thanks! We'll be in touch in the next few days to confirm registration and collect additional info. Please reach out to info@thelaunchcamp.com with any questions.
-  					</h4>
-				</div>												  			  				
+  				</form>	    				
 			</div>			
 		</div>
 	</div>	

@@ -8,27 +8,8 @@ $(function() {
 		clickedSession.addClass("focus");
 		selectedSession = clickedSession.html();
 		selectedSessionNumber = clickedSession.data("number")
+		$(".no-session").hide();
 	})
-
-	var key;
-	if (location.host.indexOf("localhost") > -1) {
-		var key = 'pk_test_BxqisMyL0ZKapZjhgfNpzHhr'
-	} else {
-		var key = 'pk_live_KEOmKcPh5aQq39FAOTGjNLfh'
-	}
-
-	var handler = StripeCheckout.configure({
-	    key: key,	    
-	    image: '/img/rocket.svg',
-	    name: "Launch Camp",
-	    locale: 'auto',
-	    token: submitInfo
-	  });
-
-	  // Close Checkout on page navigation
-	  $(window).on('popstate', function() {
-	    handler.close();
-	  });
 
 	$(".submit-application").click(function() {	
 		// first validate all the inputs
@@ -43,53 +24,16 @@ $(function() {
 			var price;
 
 			var couponCode = $("#coupon-code").val()
-			if (couponCode) {
-				if (couponCode.toLowerCase() === "cubb") {
-					price = 100000
-				} else {
-					$(".coupon-error").show();	
-					return 
-				}
-			} else {
-				price = 120000
-			}			
+			if (couponCode && couponCode.toLowerCase() !== "cubb") {
+				$(".coupon-error").show();	
+				return 				
+			}
 
-			handler.open({	     
-		      description: selectedSession,
-		      amount: price,
-		      email: $("#email").val(),
-		      allowRememberMe: false
-		    });	
+			$("#session-number").val(selectedSessionNumber);
+			
+			$(".application-form").submit();
 		}	
 	})
-
-	function submitInfo(token) {
-		var application = $(".application-form")
-		$(".submit-application").addClass("btn-warning").html("Sending...");
-
-		var enrollmentData = {};
-
-		$(".application-form input").each(function(i, el) {
-			enrollmentData[el.name] = $(el).val();
-		})
-
-		enrollmentData["session-number"] = selectedSessionNumber;		
-
-		$.ajax({
-			url: "/enroll",
-			method: "POST",			
-			data: {enrollment_data: enrollmentData, token: token}
-		}).then(function() {			
-			$(".overlay").css("z-index", "200");
-			$(".overlay").animate({"opacity": "1"}, {
-				duration: 500
-			});
-			return
-		}).fail(function(resp) {
-			$(".submit-application").removeClass("btn-warning").addClass("btn-primary").val("Proceed to Payment");	
-			console.log(resp);
-			$(".payment-error").html(resp.responseJSON.message + " Please try again.");
-			$(".payment-error").show();
-		})		
-	}	
 })
+
+

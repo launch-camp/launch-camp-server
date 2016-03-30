@@ -10,20 +10,14 @@ if (!stripeKey) throw "StripeTokenNotDefined"
 var stripe = require("stripe")(stripeKey);
 
 /* GET home page. */
-router.post('/enroll', function(req, res, next) {
+router.post('/enroll', function(req, res, next) {	
 	var enrollment = req.body.enrollment_data;
 	var stripeToken = req.body.token;		
 
-	var price; 	
-
-	if (req.body.enrollment_data["coupon-code"].toLowerCase() === "cubb") {
-		price = 100000;
-	} else {
-		price = 120000
-	}
+	var price = checkCouponCode(req.body.enrollment_data["Discount Code"]);
 
 	stripe.customers.create({
-	  source: stripeToken.id,
+	  source: stripeToken,
 	  description: enrollment.email
 	}).then(function(customer) {		
 		return stripe.charges.create({
@@ -46,5 +40,38 @@ router.post('/enroll', function(req, res, next) {
 		return 
 	})
 });
+
+router.post('/confirmation', function(req, res, next) {
+	var enrollment = req.body;		
+	sessionNumber = enrollment["Session"];
+
+	if (sessionNumber === "1") {
+		enrollment["Session"] = "6/20 - 7/1: Design Tech High School, Millbrae"
+	} else if (sessionNumber === "2") {
+		enrollment["Session"] = "7/11 - 7/22: Union Square, San Francisco"		
+	} else {
+		enrollment["Session"] = "7/27 - 8/9: Cubberley Community Center, Palo Alto"
+	}
+
+	var coupon = getCoupon(req.body["Discount Code"]);
+
+	res.render("confirmation.jade", _.extend({data: enrollment, sessionNumber: sessionNumber}, coupon));
+});
+
+function checkCouponCode(code) {
+	if (code.toLowerCase() === "cubb") {
+		return 100000;
+	} else {
+		return 120000
+	}
+}
+
+function getCoupon(code) {
+	if (code.toLowerCase() === "cubb") {
+		return {price: "$1,000.00", discount: "$200"}
+	} else {
+		return {price: "$1,200.00"}
+	}
+}
 
 module.exports = router;
