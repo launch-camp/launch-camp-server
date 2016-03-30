@@ -3,8 +3,9 @@ $(function() {
 	$form.find('.subscribe').on('click', payWithStripe);
 
 	/* If you're using Stripe for payments */
-	function payWithStripe(e) {
+	function payWithStripe(e) {		
 	    e.preventDefault();
+	    ga && ga('send', 'event', 'payment_attempt');
 	    
 	    /* Abort if invalid form data */
 	    if (!validator.form()) {

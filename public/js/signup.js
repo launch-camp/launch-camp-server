@@ -11,7 +11,7 @@ $(function() {
 		$(".no-session").hide();
 	})
 
-	$(".submit-application").click(function() {	
+	$(".submit-application").click(function() {			
 		// first validate all the inputs
 
 		console.log("validating!");
