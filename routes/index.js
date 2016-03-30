@@ -16,12 +16,17 @@ router.post('/enroll', function(req, res, next) {
 
 	var price = checkCouponCode(req.body.enrollment_data["Discount Code"]);
 
+	var email = enrollment["Parent Email"];
+	var name = enrollment["Parent Name"];
+
+	console.log("email", email, name);
 	stripe.customers.create({
 	  source: stripeToken,
-	  description: enrollment.email
+	  description: name,
+	  email: email
 	}).then(function(customer) {		
 		return stripe.charges.create({
-			amount: price, // amount in cents, again
+			amount: 50, // amount in cents, again
 			currency: "usd",
 			customer: customer.id
 		});				
