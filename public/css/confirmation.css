@@ -42,6 +42,10 @@
 	display: none;
 }
 
+.display-table {
+	width:100%;
+}
+
 /*.payment-section {
 	border: 2px solid #90C5CF;	
 	padding: 10px;	
