@@ -38,12 +38,29 @@
 	font-size:23px;
 }
 
-.call-row {
-	margin-top: 20px;
+.call-header, .email-entry, .or-header {
+	margin-top: 5px;
+}
+
+.questions-header {
+	margin-top: 0px;
+}
+
+.email-entry-header {
+	margin-bottom: 10px;
+}
+
+.email-header {
+	margin-bottom: 5px;
+}
+
+.ready-header {
+	margin-top: 0px;
+	margin-bottom: 20px;
 }
 
 .session-row {
-	margin-bottom: 20px;
+	margin-bottom: 10px;
 }
 
 .signup-container {
@@ -71,7 +88,7 @@
 
 .application-form {
 	position: relative;
-	padding: 40px;
+	padding: 0 40px;
 	z-index: 100;
 }
 
@@ -102,6 +119,11 @@ label.error {
 
 .last-item {
 	padding-bottom: 80px;
+}
+
+.submit-application {
+	margin-bottom: 10px;
+	margin-top: 20px;
 }
 
 @media (max-device-width : 768px)  { 

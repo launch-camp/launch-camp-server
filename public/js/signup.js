@@ -34,6 +34,25 @@ $(function() {
 			$(".application-form").submit();
 		}	
 	})
+
+	$(".email-submit").click(function(e) {
+		var email = $(".email-input").val();
+		if (email) {
+			$.ajax({				
+				type: "post",
+				url: "//formspree.io/info@thelaunchcamp.com",
+				data: {
+					email_address: email
+				},
+				"dataType": "text",
+				complete: function(resp) {					
+					$(".email-entry-header").html("Thanks! We'll be in touch soon.");
+					$(".email-input").attr("disabled", true);
+					$(".email-submit").attr("disabled", true);
+				}
+			})
+		}
+	})
 })
 
 
