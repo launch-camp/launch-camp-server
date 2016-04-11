@@ -121,6 +121,7 @@ $(function() {
 	// submit info
 
 	function submitInfo(token) {	
+		fbq && fbq('track', 'Purchase');
 		console.log("token is", token);
 		$form.find("input").prop('disabled', true);
 
