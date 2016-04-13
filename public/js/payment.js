@@ -2,6 +2,10 @@ $(function() {
 	var $form = $('#payment-form');
 	$form.find('.subscribe').on('click', payWithStripe);
 
+	$form.find('input[name=cardNumber]').on('click', function() {		
+		ga && ga('send', 'event', 'entered_card_field');
+	});
+
 	/* If you're using Stripe for payments */
 	function payWithStripe(e) {		
 	    e.preventDefault();
@@ -117,11 +121,10 @@ $(function() {
 	    }
 	}, 250);
 	
-
 	// submit info
 
 	function submitInfo(token) {	
-		fbq && fbq('track', 'Purchase');
+		fbq && fbq('track', 'Purchase', {value: '1200.00', currency: 'USD'});
 		console.log("token is", token);
 		$form.find("input").prop('disabled', true);
 
@@ -135,10 +138,10 @@ $(function() {
 	    	$form.find('.subscribe').html('Successfull Enrolled <i class="fa fa-check"></i>');
 		})
 		.fail(function(data) {
-		    $form.find('.subscribe').html('There was a problem').removeClass('success').addClass('error');
+		    $form.find('.subscribe').html('There was a problem.').removeClass('success').addClass('error');
 		    /* Show Stripe errors on the form */
 		    console.log("data", data);
-		    $form.find('.payment-errors').text(data.responseJSON.message);
+		    $form.find('.payment-errors').text(data.responseJSON.message + " Please reload and try again.");
 		    $form.find('.payment-errors').closest('.row').show();
 		});
 	}	

@@ -6,7 +6,7 @@ block title
 block css
     link(rel='stylesheet', href='/css/confirmation.css')
     link(rel='stylesheet', href='/font-awesome/css/font-awesome.min.css')
-    link(href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css')
+    link(href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css')
 
  block js
     script.
@@ -33,7 +33,10 @@ block css
 block content            
     .container.content-container
         .row 
-            h4.col-md-4.col-md-offset-4.text-center.confirmation-text Please confirm the following information is correct before submitting payment. You can unenroll before June 1st 2016, for a full refund.
+            .confirmation-text.col-md-4.col-md-offset-4.text-center
+              h4 Please confirm the following information is correct before submitting payment. You can unenroll before June 1st 2016, for a full refund.
+
+              h4 You'll receive a welcome packet within 24 hours of enrolling. See you this summer!
         .row
             .col-md-5.col-md-offset-1.signup-info
                 each val, field in data 
@@ -44,19 +47,23 @@ block content
             .col-md-4.col-md-offset-1.payment-section                                            
                 .panel.panel-default.credit-card-box
                   .panel-heading.display-table                    
+                    .row.payment-image-container.text-center
+                        .payment-image-wrapper
+                          img.payment-image(src="img/rocket.svg")
+                        h4.payment-header.text-center Launch Camp Enrollment
                     if (discount) 
-                      .row.display-tr
+                      .row
                         .panel-title.display-td
                           .charge-base &nbsp;&nbsp;$1,200.00
                           .charge-discount - #{discount}                            
                           .line-wrapper
                             .line                                                    
 
-                    .row.display-tr
+                    .row
                       .display-td
                         h3.charge-final #{price}
                       .display-td                        
-                        img.img-responsive.pull-right(src='http://i76.imgup.net/accepted_c22e0.png')
+                        img.card-imgs.img-responsive.pull-right(src='http://i76.imgup.net/accepted_c22e0.png')
                   .panel-body                    
                     form#payment-form(role='form', method='POST', action='javascript:void(0);')                        
                       .fields                        
@@ -83,25 +90,25 @@ block content
                       .row
                         .col-xs-12
                           button.subscribe.btn.btn-success.btn-lg.btn-block(type='button') Submit Payment and Enroll
+                      .row
+                        .col-xs-12.text-center
+                          a.stripe-logo-link(href="https://stripe.com/", target="_blank")
+                            img(src="img/stripe-logo.png")
                       .row.payment-success
                           .col-xs-12 Thank you for enrolling, you should receive a receipt from our payment manager, Stripe, in a few minutes. We'll be in touch soon with additional forms and releases. Email info@thelaunchcamp.com if you have any questions!                                                                    
                       .row(style='display:none;')
                         .col-xs-12
                           p.payment-errors
 
-                
-                    //- .form-group
-                    //-     label Card Number                       
-                    //-     input(class=" form-control" type='text', size='20', data-stripe='number')
-                    //- .form-group
-                    //-     label CVC
-                    //-     input(class=" form-control" type='text', size='4', data-stripe='cvc')
-                    //- .form-group
-                    //-     label Expiration (MM/YYYY)
-                    //-     .expiration-fields
-                    //-         input(class="card-month" type='text', size='2', data-stripe='exp-month')
-                    //-         span  / 
-                    //-         input(class="card-year" type='text', size='4', data-stripe='exp-year')
-                    //- .form-group.text-center
-                    //-     button(class="btn btn-primary") Submit Payment
-
+    .footer.clearfix
+      .contact-wrapper
+        h4.contact
+          | Launch Camp, San Francisco CA, 
+          a(href='mailto:info@thelaunchcamp.com') info@thelaunchcamp.com
+          | , 240-603-2654
+      .connect-wrapper
+        h1.connect
+          a(href='http://twitter.com/LaunchCampSF')
+            i.fa.fa-twitter-square
+          a(href='https://www.facebook.com/Launch-Camp-1155675964454166/info/?tab=page_info&view')
+            i.fa.fa-facebook-square

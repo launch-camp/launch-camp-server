@@ -1,3 +1,7 @@
+html, body {
+  overflow: auto;
+}
+
 .value {
 	font-weight: normal;
 }
@@ -18,7 +22,8 @@
 }
 
 .signup-info {
-	
+  background: rgba(194,238,124, .4);	
+  border-radius: 5px;
 }
 
 .line-wrapper {
@@ -44,6 +49,30 @@
 
 .display-table {
 	width:100%;
+}
+
+.panel-heading .row {
+  padding: 0 20px 0 20px; 
+}
+
+.payment-image-wrapper { 
+  height: 80px;
+  display: inline-block;
+  width: 80px;
+  overflow: hidden;
+  /*background: rgba(91,158,170, .2);*/
+  background: white;
+  border: 2px solid black;
+  border-radius: 20%;
+  padding: 3px;
+}
+.payment-image {  
+  height: 67px;  
+}
+
+.payment-header {
+  width: 100%;
+  font-weight: bold;
 }
 
 /*.payment-section {
@@ -91,6 +120,25 @@
     width: 50%;
 }
 /* Just looks nicer */
-.credit-card-box .panel-heading img {
+.credit-card-box .panel-heading .card-imgs {
     min-width: 180px;
+}
+
+.stripe-logo-link {
+  display: inline-block;
+  margin-top: 10px
+}
+
+.content-container {
+  padding-bottom: 60px;
+}
+
+@media (max-device-width: 480px) {  
+  .signup-info {
+    margin-bottom: 60px;
+  }
+
+  .subscribe {
+    font-size: 40px;
+  }
 }

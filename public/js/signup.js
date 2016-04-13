@@ -30,29 +30,33 @@ $(function() {
 			}
 
 			$("#session-number").val(selectedSessionNumber);
-			
-			$(".application-form").submit();
+
+			submitFormSpree($(".application-form").serialize(), function() {				
+				$(".application-form").submit();
+			})				
 		}	
 	})
 
 	$(".email-submit").click(function(e) {
 		var email = $(".email-input").val();
 		if (email) {
-			$.ajax({				
-				type: "post",
-				url: "//formspree.io/info@thelaunchcamp.com",
-				data: {
-					email_address: email
-				},
-				"dataType": "text",
-				complete: function(resp) {					
-					$(".email-entry-header").html("Thanks! We'll be in touch soon.");
-					$(".email-input").attr("disabled", true);
-					$(".email-submit").attr("disabled", true);
-				}
+			submitFormSpree({ email_address: email}, function() {				
+				$(".email-entry-header").html("Thanks! We'll be in touch soon.");
+				$(".email-input").attr("disabled", true);
+				$(".email-submit").attr("disabled", true);				
 			})
 		}
 	})
 })
+
+function submitFormSpree(data, callback) {
+	$.ajax({				
+		type: "post",
+		url: "//formspree.io/info@thelaunchcamp.com",
+		data: data,
+		"dataType": "text",
+		complete: callback
+	})
+}
 
 
