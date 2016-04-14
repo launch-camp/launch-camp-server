@@ -24,7 +24,7 @@ $(function() {
 			var price;
 
 			var couponCode = $("#coupon-code").val()
-			if (couponCode && couponCode.toLowerCase() !== "cubb") {
+			if (couponCode && couponCode.toLowerCase() !== "gunn") {
 				$(".coupon-error").show();	
 				return 				
 			}

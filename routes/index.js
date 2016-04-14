@@ -64,7 +64,7 @@ router.post('/confirmation', function(req, res, next) {
 });
 
 function checkCouponCode(code) {
-	if (code.toLowerCase() === "cubb") {
+	if (code.toLowerCase() === "gunn") {
 		return 100000;
 	} else {
 		return 120000
@@ -72,7 +72,7 @@ function checkCouponCode(code) {
 }
 
 function getCoupon(code) {
-	if (code.toLowerCase() === "cubb") {
+	if (code.toLowerCase() === "gunn") {
 		return {price: "$1,000.00", discount: "$200"}
 	} else {
 		return {price: "$1,200.00"}
