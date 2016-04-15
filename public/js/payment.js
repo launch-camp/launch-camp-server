@@ -123,9 +123,7 @@ $(function() {
 	
 	// submit info
 
-	function submitInfo(token) {	
-		fbq && fbq('track', 'Purchase', {value: '1200.00', currency: 'USD'});
-		console.log("token is", token);
+	function submitInfo(token) {					
 		$form.find("input").prop('disabled', true);
 
 		$.ajax({
@@ -136,6 +134,7 @@ $(function() {
 		.done(function(data) {	
 			$(".payment-success").show();
 	    	$form.find('.subscribe').html('Successfull Enrolled <i class="fa fa-check"></i>');
+	    	trackConversions();
 		})
 		.fail(function(data) {
 		    $form.find('.subscribe').html('There was a problem.').removeClass('success').addClass('error');
@@ -144,5 +143,17 @@ $(function() {
 		    $form.find('.payment-errors').text(data.responseJSON.message + " Please reload and try again.");
 		    $form.find('.payment-errors').closest('.row').show();
 		});
+	}	
+
+	function trackConversions() {		
+		google_trackConversion && google_trackConversion({
+			google_conversion_id: 989438159,
+			google_remarketing_only: false,
+			google_conversion_label: "ImLfCJP-12UQz8Hm1wM",
+			google_conversion_color: "ffffff",
+			google_conversion_format: "3",
+			google_conversion_language: "en"
+		})		
+		fbq && fbq('track', 'Purchase', {value: '1200.00', currency: 'USD'});
 	}	
 })
