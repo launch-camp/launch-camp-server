@@ -300,8 +300,9 @@
 	background: #C1E4EA;	
 }
 
-.newsletter-thankyou {
-	color: white;
+h4.newsletter-thankyou {
+	color: black;
+	margin-top: 10px;
 	display: none;
 }
 
