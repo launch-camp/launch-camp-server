@@ -13,3 +13,15 @@ $(function() {
 		}
 	})	
 })
+
+function submitFormSpree(data, callback) {
+	$.ajax({				
+		type: "post",
+		url: "//formspree.io/info@thelaunchcamp.com",
+		data: data,
+		"dataType": "text",
+		complete: callback
+	})
+}
+
+

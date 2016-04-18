@@ -34,4 +34,15 @@ $(function(){
 			target:"launch-camp-logo-container"
 		});	
 	}
+
+	$(".email-submit").click(function(e) {
+		var email = $(".email-input").val();
+		if (email) {
+			submitFormSpree({ email_address: email}, function() {				
+				$(".newsletter-thankyou").show()
+				$(".email-input").attr("disabled", true);
+				$(".email-submit").attr("disabled", true);				
+			})
+		}
+	})	
 })

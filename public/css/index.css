@@ -285,8 +285,28 @@
 }
 
 
-.enroll-container {
+.newsletter-container {
 	padding-bottom: 80px;
+}
+
+.newsletter-container h4 {
+	margin-top: 0px;		
+	margin-bottom: 0px
+}
+
+.newsletter-prompt-span {
+	display: inline-block;
+	padding: 10px;
+	background: #C1E4EA;	
+}
+
+.newsletter-thankyou {
+	color: white;
+	display: none;
+}
+
+button.email-submit.btn-primary {
+	background: #5B9EAA;
 }
 
 /* to be used for img resizing */
@@ -321,5 +341,9 @@
 
 	.enroll-link {		
 		font-size: 80px;
+	}
+
+	.email-entry input, .email-entry button {
+		font-size: 50px; 
 	}
 }
