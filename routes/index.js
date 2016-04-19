@@ -64,8 +64,8 @@ router.post('/confirmation', function(req, res, next) {
 });
 
 function checkCouponCode(code) {
-	if (code.toLowerCase() === "gunn") {
-		return 100000;
+	if (code.toLowerCase() === "gunn" || code.toLowerCase() === "dtech") {
+		return 96000;
 	} else {
 		return 120000
 	}
@@ -73,7 +73,9 @@ function checkCouponCode(code) {
 
 function getCoupon(code) {
 	if (code.toLowerCase() === "gunn") {
-		return {price: "$1,000.00", discount: "$200"}
+		return {price: "$960.00", discount: "20%"}
+	} else if (code.toLowerCase() === "dtech") {
+		return {price: "$960.00", discount: "20%"}
 	} else {
 		return {price: "$1,200.00"}
 	}
