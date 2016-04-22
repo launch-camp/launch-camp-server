@@ -43,6 +43,8 @@ $(function(){
 				$(".email-input").attr("disabled", true);
 				$(".email-submit").attr("disabled", true);				
 			})
+
+			fbq && fbq('track', 'Lead');
 		}
 	})	
 })
