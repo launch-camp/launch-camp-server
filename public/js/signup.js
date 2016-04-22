@@ -1,6 +1,8 @@
 var selectedSession;
 var selectedSessionNumber;
 
+var couponCodes = ["gunn", "dtech", "hickman"];
+
 $(function() {
 	$(".session-choice").click(function(e) {
 		$(".session-choice").removeClass("focus");
@@ -9,22 +11,23 @@ $(function() {
 		selectedSession = clickedSession.html();
 		selectedSessionNumber = clickedSession.data("number")
 		$(".no-session").hide();
+		$(".general-error").hide();
 	})
 
 	$(".submit-application").click(function() {			
-		// first validate all the inputs
-
-		console.log("validating!");
+		// first validate all the inputs		
 		
 		if (!selectedSession) {
 			$(".no-session").show();
+			$(".general-error").show();
 		} else if (!$(".application-form").valid()) {
 			$(".info-error").show();
+			$(".general-error").show();
 		} else {
 			var price;
 
 			var couponCode = $("#coupon-code").val()
-			if (couponCode && !(couponCode.toLowerCase() === "gunn" || couponCode.toLowerCase() === "dtech")) {
+			if (couponCode && !(couponCodes.indexOf(couponCode.toLowerCase()) >  -1)) {
 				$(".coupon-error").show();	
 				return 				
 			}
