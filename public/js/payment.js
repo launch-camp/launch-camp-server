@@ -2,7 +2,8 @@ $(function() {
 	var $form = $('#payment-form');
 	$form.find('.subscribe').on('click', payWithStripe);
 
-	$form.find('input[name=cardNumber]').on('click', function() {		
+	$form.find('input[name=cardNumber]').on('click', function() {
+		console.log("entered card field");
 		ga && ga('send', 'event', 'entered_card_field');
 	});
 
@@ -15,6 +16,8 @@ $(function() {
 	    if (!validator.form()) {
 	        return;
 	    }
+
+	    ga && ga('send', 'event', 'no_payment_errors');
 
 	    /* Visual feedback */
 	    $form.find('.subscribe').html('Validating <i class="fa fa-spinner fa-pulse"></i>').prop('disabled', true);
