@@ -68,6 +68,7 @@
 	 bottom: 0px;	
 	 /*width: 100%;*/
 	 padding-bottom: 10px;
+	 margin-bottom: 0px;
 }
 
 .banner-img {	
@@ -87,10 +88,16 @@
 }
 
 .enroll {	
-	margin-top: 40px;
-	display: inline;	
-	text-align: left;
+	/*margin-top: 40px;*/
+	text-align: center;
+	position: relative;
+	z-index: 10000;
+	font-family: "Open Sans"
 }
+
+/*.enroll .enroll-link {
+	background: #EA6759;	
+}*/
 
 .overview-wrapper {	
 	text-align: center;
@@ -105,7 +112,7 @@
 }
 
 .problem-intro {	
-	margin-bottom: 50px;
+	margin-bottom: 30px;
 	margin-top: 40px;	
 	/*border-top-left-radius: 10px;*/
 	/*border-top-right-radius: 10px;*/
@@ -117,6 +124,10 @@
 	padding: 10px; 
 	color:white;	
 	display: inline-block;		
+}
+
+.explanation-section .row.problem-intro-row {
+	margin-bottom: 50px;
 }
 
 .problem {
@@ -254,8 +265,40 @@
 	margin: 15px 0 0px 0;
 }
 
-.long-term {	
+.dont-quit-container {
+	/*background-color: #FFB7AF;*/			
 	margin-bottom: 40px;
+}
+
+.dont-quit-container h2 {
+	margin: 0 0 0 0;	
+}
+
+.dont-quit-span {
+	/*border: 2px solid #EA6759;*/
+	padding: 10px; 
+	display: inline-block;
+	color: black;
+}
+
+.team-logo-row {
+	margin-top: 30px;
+}
+
+.roti-logo {
+	height: 100px;
+}
+
+.cloud-logo {
+	height: 100px;
+}
+
+.shadow-logo {
+	height: 100px;
+}
+
+.long-term {	
+	margin-bottom: 20px;
 }
 
 .enroll-wrapper {
@@ -340,9 +383,17 @@ button.email-submit.btn-primary {
 		margin-top: 100px;
 	}	
 
+	.quote-wrapper {
+		margin-bottom: 80px;
+	}
+
 	.enroll-link {		
 		font-size: 80px;
 	}
+
+	.enroll .enroll-link {		
+		display: none;
+	}	
 
 	.email-entry input, .email-entry button {
 		font-size: 50px; 
