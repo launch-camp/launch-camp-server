@@ -71,7 +71,7 @@ function checkCouponCode(code) {
 	} else if (code.toLowerCase() === "gwc" || code.toLowerCase() === "gunn" || code.toLowerCase() === "dtech") {
 		return 96000;
 	} else if (referals.indexOf(code.toLowerCase()) > -1) {
-		return 102000;
+		return 96000;
 	} else {
 		return 120000;
 	}
@@ -83,7 +83,7 @@ function getCoupon(code) {
 	} else if (code.toLowerCase() === "gwc" || code.toLowerCase() === "gunn" || code.toLowerCase() === "dtech") {
 		return {price: "$960.00", discount: "20%"}
 	} else if (referals.indexOf(code.toLowerCase()) > -1) {
-		return {price: "$1020.00", discount: "15%"}
+		return {price: "$960.00", discount: "20%"}
 	} else {
 		return {price: "$1,200.00"}
 	}
