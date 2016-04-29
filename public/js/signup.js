@@ -1,7 +1,7 @@
 var selectedSession;
 var selectedSessionNumber;
 
-var couponCodes = ["gunn", "dtech", "hickman", "crystal"];
+var couponCodes = ["gunn", "dtech", "hickman", "crystal", "gwc"];
 
 $(function() {
 	$(".session-choice").click(function(e) {

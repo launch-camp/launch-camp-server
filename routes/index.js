@@ -68,7 +68,7 @@ var referals = ["hickman"];
 function checkCouponCode(code) {
 	if (code.toLowerCase() === "crystal") {
 		return 84000;
-	} else if (code.toLowerCase() === "gunn" || code.toLowerCase() === "dtech") {
+	} else if (code.toLowerCase() === "gwc" || code.toLowerCase() === "gunn" || code.toLowerCase() === "dtech") {
 		return 96000;
 	} else if (referals.indexOf(code.toLowerCase()) > -1) {
 		return 102000;
@@ -80,7 +80,7 @@ function checkCouponCode(code) {
 function getCoupon(code) {
 	if (code.toLowerCase() === "crystal") {
 		return {price: "$840.00", discount: "30%"}
-	} else if (code.toLowerCase() === "gunn" || code.toLowerCase() === "dtech") {
+	} else if (code.toLowerCase() === "gwc" || code.toLowerCase() === "gunn" || code.toLowerCase() === "dtech") {
 		return {price: "$960.00", discount: "20%"}
 	} else if (referals.indexOf(code.toLowerCase()) > -1) {
 		return {price: "$1020.00", discount: "15%"}
