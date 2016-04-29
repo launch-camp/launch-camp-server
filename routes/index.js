@@ -63,7 +63,7 @@ router.post('/confirmation', function(req, res, next) {
 	res.render("confirmation.jade", _.extend({data: enrollment, sessionNumber: sessionNumber}, coupon));
 });
 
-var referals = ["hickman"];
+var referals = ["hickman", "parab"];
 
 function checkCouponCode(code) {
 	if (code.toLowerCase() === "crystal") {
