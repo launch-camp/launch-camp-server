@@ -111,8 +111,7 @@
 	color: #EC4B75;
 }
 
-.problem-intro {	
-	margin-bottom: 30px;
+.problem-intro {		
 	margin-top: 40px;	
 	/*border-top-left-radius: 10px;*/
 	/*border-top-right-radius: 10px;*/
@@ -127,15 +126,11 @@
 }
 
 .explanation-section .row.problem-intro-row {
-	margin-bottom: 50px;
+	margin-bottom: 10px;
 }
 
-.problem {
-	margin-bottom: 30px;
-}
-
-.problem-followup {
-	padding: 0px 20px 0px 20px;
+.explanation-section .row.program-summary {
+	margin-bottom: 50px
 }
 
 .problem-logo-container img {
