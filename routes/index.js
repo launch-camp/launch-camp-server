@@ -63,15 +63,16 @@ router.post('/confirmation', function(req, res, next) {
 	res.render("confirmation.jade", _.extend({data: enrollment, sessionNumber: sessionNumber}, coupon));
 });
 
-var referals = ["hickman", "parab"];
+var twentyPercent = ["parab", "gwc", "gunn", "dtech"];
+var fifteenPercent = ["hickman", "launch"]
 
 function checkCouponCode(code) {
 	if (code.toLowerCase() === "crystal") {
 		return 84000;
-	} else if (code.toLowerCase() === "gwc" || code.toLowerCase() === "gunn" || code.toLowerCase() === "dtech") {
+	} else if (twentyPercent.indexOf(code.toLowerCase()) > -1) {
 		return 96000;
-	} else if (referals.indexOf(code.toLowerCase()) > -1) {
-		return 96000;
+	} else if (fifteenPercent.indexOf(code.toLowerCase()) > -1) {
+		return 102000;
 	} else {
 		return 120000;
 	}
@@ -80,10 +81,10 @@ function checkCouponCode(code) {
 function getCoupon(code) {
 	if (code.toLowerCase() === "crystal") {
 		return {price: "$840.00", discount: "30%"}
-	} else if (code.toLowerCase() === "gwc" || code.toLowerCase() === "gunn" || code.toLowerCase() === "dtech") {
+	} else if (twentyPercent.indexOf(code.toLowerCase()) > -1) {
 		return {price: "$960.00", discount: "20%"}
-	} else if (referals.indexOf(code.toLowerCase()) > -1) {
-		return {price: "$960.00", discount: "20%"}
+	} else if (fifteenPercent.indexOf(code.toLowerCase()) > -1) {
+		return {price: "$1,020.00", discount: "15%"}
 	} else {
 		return {price: "$1,200.00"}
 	}
