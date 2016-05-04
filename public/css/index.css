@@ -96,10 +96,14 @@
 }
 
 .intro .enroll-link {
-	background: #FF9185;
+	background: transparent;
 	color: black;
 	border: 2px solid black;
 	font-weight: bold
+}
+
+.intro .enroll-link:hover {
+	color: black;
 }
 
 /*.enroll .enroll-link {
