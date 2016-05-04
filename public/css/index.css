@@ -87,12 +87,19 @@
 	top: 0px;
 }
 
-.enroll {	
-	/*margin-top: 40px;*/
+
+.intro .enroll {
 	text-align: center;
 	position: relative;
 	z-index: 10000;
-	font-family: "Open Sans"
+	font-family: "Open Sans";
+}
+
+.intro .enroll-link {
+	background: #FF9185;
+	color: black;
+	border: 2px solid black;
+	font-weight: bold
 }
 
 /*.enroll .enroll-link {
@@ -222,21 +229,18 @@
 	margin-bottom: 40px;
 }
 
-.results-header-span {
-	/*background: #D04334;
-	color: white;
-	padding: 10px;*/
-	/*font-weight: bold;*/
+h4.instructor-name {
+	font-weight: bold;
+	margin-bottom: 2px;
 }
 
-
-
-/*.skills-container {
-	border: 4px solid #D04334;
-	border-radius: 5px;
-	margin-bottom: 40px;
+.instructor-role {
+	font-size: 12px;
 }
-*/
+
+.img-line-1 { 
+	margin-bottom: 10px 
+}
 
 .skills-container .row-1 {
 	margin-bottom: 35px;	
