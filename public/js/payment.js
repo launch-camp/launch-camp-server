@@ -13,9 +13,9 @@ $(function() {
 	    ga && ga('send', 'event', 'payment_attempt');
 	    
 	    /* Abort if invalid form data */
-	    if (!validator.form()) {
-	        return;
-	    }
+	    // if (!validator.form()) {
+	    //     return;
+	    // }
 
 	    ga && ga('send', 'event', 'no_payment_errors');
 
@@ -149,14 +149,14 @@ $(function() {
 	}	
 
 	function trackConversions() {		
-		google_trackConversion && google_trackConversion({
-			google_conversion_id: 989438159,
-			google_remarketing_only: false,
-			google_conversion_label: "ImLfCJP-12UQz8Hm1wM",
-			google_conversion_color: "ffffff",
-			google_conversion_format: "3",
-			google_conversion_language: "en"
-		})		
+		// google_trackConversion && google_trackConversion({
+		// 	google_conversion_id: 989438159,
+		// 	google_remarketing_only: false,
+		// 	google_conversion_label: "ImLfCJP-12UQz8Hm1wM",
+		// 	google_conversion_color: "ffffff",
+		// 	google_conversion_format: "3",
+		// 	google_conversion_language: "en"
+		// })		
 		fbq && fbq('track', 'Purchase', {value: '1200.00', currency: 'USD'});
 	}	
 })
