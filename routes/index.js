@@ -63,7 +63,7 @@ router.post('/confirmation', function(req, res, next) {
 	res.render("confirmation.jade", _.extend({data: enrollment, sessionNumber: sessionNumber}, coupon));
 });
 
-var twentyPercent = ["parab", "gwc", "gunn", "dtech"];
+var twentyPercent = ["parab", "gwc", "gunn", "dtech", "farley"];
 var fifteenPercent = ["hickman", "launch"]
 
 function checkCouponCode(code) {
