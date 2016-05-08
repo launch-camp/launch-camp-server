@@ -64,7 +64,7 @@ router.post('/confirmation', function(req, res, next) {
 });
 
 var twentyPercent = ["parab", "gwc", "gunn", "dtech", "farley"];
-var fifteenPercent = ["hickman", "launch"]
+var fifteenPercent = ["hickman", "launch", "wang"]
 
 function checkCouponCode(code) {
 	if (code.toLowerCase() === "crystal") {
