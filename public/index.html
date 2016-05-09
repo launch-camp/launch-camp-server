@@ -9,6 +9,7 @@
 	<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css"></link>	
 	<script type="text/javascript" src="js/jsPlumb-2.0.4.js"></script>
 	<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="js/jquery.validate.min.js"></script>
 	<script type="text/javascript" src="js/index.js"></script>
 	<script type="text/javascript" src="js/common.js"></script>
 	<link rel="icon" type="image/png" href="/img/favicon.png">
@@ -112,21 +113,23 @@
 										<div class="info-session-title">
 											Which info session will you attend?
 										</div>
+										<div class="info-session-error">
+										</div>
 										<div class="radio-options-wrapper">																	
 											<div class="radio-options">									
 												<div>
-													<input type="radio" name="info session" value="Wednesday, 5/11"/> Wednesday, 5/11, 7-8PM
+													<input type="radio" name="info session" value="Wednesday, 5/11" required/> Wednesday, 5/11, 7-8PM
 												</div>
 												<div>
-							                    	<input type="radio" name="info session" value="Monday, 5/16"/> Monday, 5/16, 7-8PM
+							                    	<input type="radio" name="info session" value="Monday, 5/16" required/> Monday, 5/16, 7-8PM
 						                    	</div>
 					                    	</div>
 				                    	</div>
 									</div>																								
 									<div class="session-group col-md-5">									
 										<div class="info-session-title">
-											Which Camp session are you interested in?
-										</div>
+											Which camp location are you interested in?
+										</div>										
 										<div class="radio-options-wrapper">									
 											<div class="radio-options">									
 												<div>
@@ -142,8 +145,11 @@
 								
 								<div class="row info-session-signup-input">									
 									<div class="col-md-6 col-md-offset-3 email-group">
+										<div class="email-error">
+
+										</div>
 										<div class="input-group">				    													
-											<input name="email" type="text" class="form-control info-session-email-input" id="grade" placeholder="Email">
+											<input name="email" type="email" class="form-control info-session-email-input" id="grade" placeholder="Email" required>
 											<div class="input-group-btn"><button class="btn btn-primary info-session-submit">Sign up</button></div>			
 										</div>									
 									</div>

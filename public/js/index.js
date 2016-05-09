@@ -61,36 +61,57 @@ $(function(){
 		}
 	})
 
-	var submitInfoSession = $(".info-session-submit");
-	var infoSessionInput = $(".info-session-email-input");
-	var infoSuccess = $(".info-session-success")
-	submitInfoSession.click(function() {		
-		var email = infoSessionInput.val();
+	var submitInfoSession = $(".info-session-submit");	
+	var infoSuccess = $(".info-session-success");
 
-		if (email) {
-			submitInfoSession.html("Submitting...").removeClass("btn-primary").addClass("btn-warning")
+	var signupForm = $(".info-session-signup");	
 
-			$.ajax({
-				url: "https://script.google.com/macros/s/AKfycbwsyTAgdJ49o48qLj5WCmwfhXbv_bsXarR4lvQ4WnMlXDIzIitl/exec",
-				method: "POST",
-				data: $(".info-session-signup").serialize(),
-				success: function() {
-					$(".last-info-session-text").removeClass("last-info-session-text");
+	signupForm.validate({		
+		errorPlacement: function(error, element) {
+			console.log("error", element);
+			if (element.attr("name") == "info session") {
+				$(".info-session-error").html(error);
+			}
 
-					submitInfoSession.html("Success!").removeClass("btn-warning").addClass("btn-success")
-					submitInfoSession.attr("disabled", true);
-					infoSessionInput.attr("disabled", true);
-					infoSuccess.show();
-					infoSuccess.addClass("last-info-session-text");
-					
-					if (olinDtechConnector && dtechLaunchCampConnector) {						
-						olinDtechConnector.repaintEverything();
-						dtechLaunchCampConnector.repaintEverything();
-					}
-				}
-			})
-		}		
+			if (element.attr("name") == "email") {
+				$(".email-error").html(error);
+			}			
 
-		return false
-	})
+			repaint()  			
+		},
+		submitHandler: function(form) {			
+			submitInfoSession.html("Submitting...").removeClass("btn-primary").addClass("btn-warning");			
+      		$.ajax({
+      			url: "https://script.google.com/macros/s/AKfycbwsyTAgdJ49o48qLj5WCmwfhXbv_bsXarR4lvQ4WnMlXDIzIitl/exec",
+      			method: "POST",
+      			data: $(form).serialize(),
+      			success: function() {      				
+      				$(".last-info-session-text").removeClass("last-info-session-text");
+
+      				submitInfoSession.html("Success!").removeClass("btn-warning").addClass("btn-success")
+      				submitInfoSession.attr("disabled", true);
+      				signupForm.find("input").attr("disabled", true);
+      				infoSuccess.show();
+      				infoSuccess.addClass("last-info-session-text");   
+
+      				repaint()  			
+      			}
+      		})
+      		return false;      		
+    	}
+	});	
+
+	signupForm.find("input[type='radio']").click(function() {
+		// wait for 100 ms for the error message to be reomved
+		setTimeout(repaint, 100);
+	});
+	signupForm.find("input[type='email']").keydown(repaint).blur(repaint)
+
+	function repaint() {
+		console.log("repsinging");
+		if (olinDtechConnector && dtechLaunchCampConnector) {						
+			olinDtechConnector.repaintEverything();
+			dtechLaunchCampConnector.repaintEverything();
+		}
+	}
 })
