@@ -132,8 +132,24 @@
 	display: none;
 }
 
-.info-session-success-span {
+form.info-session-signup {
+	margin-bottom: 0px;
+}
 
+form .row.info-session-signup-input {
+	margin-bottom: 0px
+}
+
+.radio-options {
+	text-align: left;
+}
+
+.radio-options-wrapper {
+	display: inline-block;
+}
+
+.info-session-title {
+	margin-bottom: 8px;
 }
 
 .overview-wrapper {	

@@ -73,7 +73,7 @@ $(function(){
 			$.ajax({
 				url: "https://script.google.com/macros/s/AKfycbwsyTAgdJ49o48qLj5WCmwfhXbv_bsXarR4lvQ4WnMlXDIzIitl/exec",
 				method: "POST",
-				data: {email: email},
+				data: $(".info-session-signup").serialize(),
 				success: function() {
 					$(".last-info-session-text").removeClass("last-info-session-text");
 
@@ -90,5 +90,7 @@ $(function(){
 				}
 			})
 		}		
+
+		return false
 	})
 })
