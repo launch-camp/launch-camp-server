@@ -87,7 +87,6 @@
 	top: 0px;
 }
 
-
 .intro .enroll {
 	text-align: center;
 	position: relative;
@@ -110,6 +109,33 @@
 	background: #EA6759;	
 }*/
 
+.explanation-section {
+	margin-top: 60px;
+}
+
+.info-session-sign-up-span {
+	background: #FFB3AB;
+	display: inline-block;
+	padding: 15px;
+}
+
+.info-session-sign-up-span h3 {
+	margin-top: 0px;
+}
+
+.last-info-session-text {
+	margin-bottom: 20px;
+}
+
+.info-session-success {
+	font-weight: bold;
+	display: none;
+}
+
+.info-session-success-span {
+
+}
+
 .overview-wrapper {	
 	text-align: center;
 }
@@ -123,7 +149,7 @@
 }
 
 .problem-intro {		
-	margin-top: 40px;	
+	margin-top: 20px;	
 	/*border-top-left-radius: 10px;*/
 	/*border-top-right-radius: 10px;*/
 	/*border-top: 2px solid black;*/
