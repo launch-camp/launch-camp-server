@@ -63,11 +63,12 @@ router.post('/confirmation', function(req, res, next) {
 	res.render("confirmation.jade", _.extend({data: enrollment, sessionNumber: sessionNumber}, coupon));
 });
 
+var thirtyPercent = ["crystal", "liyan"];
 var twentyPercent = ["parab", "gwc", "gunn", "dtech", "farley"];
 var fifteenPercent = ["hickman", "launch", "wang", "hu"];
 
 function checkCouponCode(code) {
-	if (code.toLowerCase() === "crystal") {
+	if (thirtyPercent.indexOf(code.toLowerCase()) > -1) {
 		return 84000;
 	} else if (twentyPercent.indexOf(code.toLowerCase()) > -1) {
 		return 96000;
@@ -79,7 +80,7 @@ function checkCouponCode(code) {
 }
 
 function getCoupon(code) {
-	if (code.toLowerCase() === "crystal") {
+	if (thirtyPercent.indexOf(code.toLowerCase()) > -1) {
 		return {price: "$840.00", discount: "30%"}
 	} else if (twentyPercent.indexOf(code.toLowerCase()) > -1) {
 		return {price: "$960.00", discount: "20%"}
