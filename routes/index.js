@@ -64,7 +64,7 @@ router.post('/confirmation', function(req, res, next) {
 });
 
 var thirtyPercent = ["crystal", "liyan"];
-var twentyPercent = ["parab", "gwc", "gunn", "dtech", "farley"];
+var twentyPercent = ["parab", "gwc", "gunn", "dtech", "farley", "sell"];
 var fifteenPercent = ["hickman", "launch", "wang", "hu"];
 
 function checkCouponCode(code) {
