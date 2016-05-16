@@ -66,17 +66,16 @@ $(function(){
 			repaint()  			
 		},
 		submitHandler: function(form) {			
-			submitInfoSession.html("Submitting...").removeClass("btn-primary").addClass("btn-warning");			
+			submitInfoSession.html("Submitting...").removeClass("btn-primary").addClass("btn-warning");						
+			submitInfoSession.attr("disabled", true);      				
       		$.ajax({
       			url: "https://script.google.com/macros/s/AKfycbwsyTAgdJ49o48qLj5WCmwfhXbv_bsXarR4lvQ4WnMlXDIzIitl/exec",
       			method: "POST",
       			data: $(form).serialize(),
       			success: function() {      				
-      				$(".last-info-session-text").removeClass("last-info-session-text");
-
-      				submitInfoSession.html("Success!").removeClass("btn-warning").addClass("btn-success")
-      				submitInfoSession.attr("disabled", true);
       				signupForm.find("input").attr("disabled", true);
+      				$(".last-info-session-text").removeClass("last-info-session-text");
+      				submitInfoSession.html("Success!").removeClass("btn-warning").addClass("btn-success")      				
       				infoSuccess.show();
       				infoSuccess.addClass("last-info-session-text");   
 
