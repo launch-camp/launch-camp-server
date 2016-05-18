@@ -113,6 +113,10 @@
 	margin-top: 60px;
 }
 
+.email-group {
+	margin-top: auto;
+}
+
 .info-session-sign-up-span {
 	background: #C2EE7C;
 	display: inline-block;
@@ -137,7 +141,8 @@ form.info-session-signup {
 }
 
 form .row.info-session-signup-input {
-	margin-bottom: 0px
+	margin-bottom: 0px;
+	display: flex;
 }
 
 .radio-options {
