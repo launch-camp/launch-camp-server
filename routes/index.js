@@ -63,7 +63,7 @@ router.post('/confirmation', function(req, res, next) {
 	res.render("confirmation.jade", _.extend({data: enrollment, sessionNumber: sessionNumber}, coupon));
 });
 
-var seventyFivePercent = ["brianna"];
+var seventyFivePercent = ["brianna", "tria"];
 var fiftyPercent = ["la", "bc", "dtech"];
 var thirtyPercent = ["crystal", "liyan"];
 var twentyPercent = ["parab", "gwc", "gunn", "farley", "sell", "start"];
