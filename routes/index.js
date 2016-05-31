@@ -67,7 +67,7 @@ var seventyFivePercent = ["brianna", "tria"];
 var fiftyPercent = ["la", "bc", "dtech"];
 var thirtyPercent = ["crystal", "liyan"];
 var twentyPercent = ["parab", "gwc", "gunn", "farley", "sell", "start"];
-var fifteenPercent = ["hickman", "launch", "wang", "hu", "liu", "saheli", "search"];
+var fifteenPercent = ["hickman", "launch", "wang", "hu", "liu", "saheli", "search", "shetty"];
 
 function checkCouponCode(code) {
 	if (seventyFivePercent.indexOf(code.toLowerCase()) > -1) {
