@@ -63,6 +63,42 @@ router.post('/confirmation', function(req, res, next) {
 	res.render("confirmation.jade", _.extend({data: enrollment, sessionNumber: sessionNumber}, coupon));
 });
 
+router.get("/invoice", function(req, res, next) {
+	var amount = req.param("amount") || 0000;	
+	var reason = req.param("reason") || "";
+
+	res.render("invoice.jade", {amount: amount, reason: reason})
+})
+
+router.post("/invoice", function(req, res, next) {
+	var stripeToken = req.body.token;		
+
+	var amount = req.body.amount;
+	var reason = req.body.reason;
+
+	var email = req.body.email	
+
+	console.log("about to make the charge");
+	
+	stripe.customers.create({
+	  source: stripeToken,	  
+	  email: email
+	}).then(function(customer) {		
+		return stripe.charges.create({
+			amount: amount,
+			currency: "usd",
+			description: reason,
+			customer: customer.id
+		});				
+	}).then(function(charge) {		
+      	res.send(200)		  		
+	}).catch(function(error) {
+		console.log("ERROOOR", error);
+		res.send(error.statusCode, {message: error.message});
+		return 
+	})	
+})
+
 var seventyFivePercent = ["brianna", "tria"];
 var fiftyPercent = ["la", "bc", "dtech"];
 var thirtyPercent = ["crystal", "liyan"];
