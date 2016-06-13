@@ -102,7 +102,7 @@ router.post("/invoice", function(req, res, next) {
 var seventyFivePercent = ["brianna", "tria"];
 var fiftyPercent = ["la", "bc", "dtech"];
 var thirtyPercent = ["crystal", "liyan"];
-var twentyPercent = ["parab", "gwc", "gunn", "farley", "sell", "start", "dooley"];
+var twentyPercent = ["parab", "gwc", "gunn", "farley", "sell", "start", "dooley", "bui"];
 var fifteenPercent = ["hickman", "launch", "wang", "hu", "liu", "saheli", "search", "shetty"];
 
 function checkCouponCode(code) {
