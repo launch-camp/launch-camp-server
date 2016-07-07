@@ -181,3 +181,15 @@
 .blogs .links {
 	margin-top: 20px;
 }
+
+@media (max-device-width: 480px) { 
+	.rocket-sidebar {
+		display: none;
+	}	
+
+	.overview-wrapper {
+		width: 100%;
+		padding: 0px;
+		margin: 0px;
+	}
+}
