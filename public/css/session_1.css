@@ -69,7 +69,7 @@
 
 .banner-img {	
 	height: 500px;	
-	/*margin-left: -4px;		*/
+	margin-left: -4px;		
 }
 
 .banner-img-wrapper {		
@@ -130,6 +130,7 @@
 	border: 4px solid rgb(210, 230, 240);
 	/*border: 4px solid #5B9EAA;	*/
 	border-radius: 5px;
+	padding-bottom: 10px;
 }
 
 .pics-row {
