@@ -173,3 +173,11 @@
 	height: 150px;
 	margin-left: -20px;
 }
+
+.blogs.row {
+	margin-top: 20px;	
+}
+
+.blogs .links {
+	margin-top: 20px;
+}
