@@ -118,6 +118,11 @@
 	margin-top: auto;
 }
 
+.info-banner {
+	background: #C2EE7C;
+	padding: 15px;
+}
+
 .info-session-sign-up-span {
 	background: #C2EE7C;
 	display: inline-block;
