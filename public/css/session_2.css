@@ -68,12 +68,16 @@
 }
 
 .banner-img {	
-	height: 500px;	
-	margin-left: -4px;		
+	height: 400px;	
+}
+
+.center.banner-img {	
+	height: 600px;		
 }
 
 .banner-img-wrapper {		
-	overflow: hidden;		
+	overflow: hidden;
+	padding: 0px;		
 }
 
 .banner-imgs-wrapper .col-xs-4 {
@@ -126,6 +130,12 @@
 
 .pic_box {
 	height: 100px;
+	overflow: hidden;
+	border-radius: 20px;
+}
+
+.pic-box-large {
+	height: 150px;
 	overflow: hidden;
 	border-radius: 20px;
 }
