@@ -68,11 +68,11 @@
 }
 
 .banner-img {	
-	height: 400px;	
+	height: 400px;
 }
 
-.center.banner-img {	
-	height: 600px;		
+.center-banner-img {	
+	width: 100%;
 }
 
 .banner-img-wrapper {		
@@ -94,13 +94,17 @@
 	top: 0px;
 }
 
+.opening-testimonials {
+	margin-top: 40px;
+}
+
 .overview-container {
-	margin-top: 100px;
+	margin-top: 50px;
 	padding-bottom: 100px;
 }
 
 .rocket-sidebar {	
-	height: 3200px;
+	height: 6000px;
 }
 
 .rocket-img {
@@ -121,7 +125,7 @@
 }
 
 .overview-number {
-	font-size: 80px;
+	font-size: 65px;
 }
 
 .overview-1-pic {

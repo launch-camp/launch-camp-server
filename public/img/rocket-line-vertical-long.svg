@@ -2,7 +2,7 @@
 <!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="67.16px" height="3200px" viewBox="0 0 67.16 3200" enable-background="new 0 0 67.16 3200" xml:space="preserve">
+	 width="67.16px" height="5760px" viewBox="0 -1280 67.16 5760" enable-background="new 0 -1280 67.16 5760" xml:space="preserve">
 <g id="Layer_1_1_" display="none">
 	
 		<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="-831.5312" y1="1071.1006" x2="2303.8359" y2="1071.1006" gradientTransform="matrix(-4.371139e-08 -1 1 -4.371139e-08 -1038.5332 2368.4683)">
@@ -43,26 +43,29 @@
 	<g>
 		<g>
 			
-				<image overflow="visible" enable-background="new    " width="32" height="3131" xlink:href="C94F6AB8842F6670.png"  transform="matrix(0.9939 0 0 0.9999 17.6772 56)">
+				<image overflow="visible" enable-background="new    " width="32" height="3131" xlink:href="DB199B587667AD2C.png"  transform="matrix(0.9939 0 0 1.8218 17.8071 -1224)">
 			</image>
 		</g>
 	</g>
 </g>
 <g id="rocket">
-	<path fill="#EB5845" stroke="#010101" stroke-width="2" stroke-miterlimit="10" d="M14.041,47.877c0,0-5.192,3.368-8.793,7.898
+	<path fill="#EB5845" stroke="#010101" stroke-width="2" stroke-miterlimit="10" d="M14.171-1232.123c0,0-5.192,3.368-8.793,7.898
 		c-2.489,3.126-5.041,10.577-5.226,11.461c-0.417,1.994-0.253,8.18-0.253,8.18s5.377-7.924,6.598-9.558
 		c0.884-1.183,8.452-6.902,8.452-6.902"/>
-	<path fill="#EB5845" stroke="#010101" stroke-width="4" stroke-miterlimit="10" d="M3.305,668.567"/>
-	<path fill="#EB5845" stroke="#010101" stroke-width="2" stroke-miterlimit="10" d="M51.091,47.877c0,0,5.191,3.368,8.795,7.898
+	<path fill="#EB5845" stroke="#010101" stroke-width="4" stroke-miterlimit="10" d="M3.435-611.433"/>
+	<path fill="#EB5845" stroke="#010101" stroke-width="2" stroke-miterlimit="10" d="M51.221-1232.123c0,0,5.191,3.368,8.795,7.898
 		c2.49,3.126,5.04,10.577,5.226,11.461c0.416,1.994,0.255,8.18,0.255,8.18s-5.382-7.924-6.597-9.558
 		c-0.888-1.183-8.453-6.902-8.453-6.902"/>
-	<path fill="#C5C9CD" stroke="#010101" stroke-width="2" stroke-miterlimit="10" d="M48.75,69.23
-		c1.652-6.845,2.607-14.833,2.607-23.377C51.357,20.528,32.7,0,32.7,0S14.04,20.528,14.04,45.854c0,8.544,0.953,16.532,2.607,23.377
-		L48.75,69.23L48.75,69.23z"/>
-	<line fill="none" stroke="#010101" stroke-width="2" stroke-miterlimit="10" x1="20.789" y1="18.396" x2="44.609" y2="18.396"/>
-	<path fill="#FFFFFF" stroke="#010101" stroke-width="2" stroke-miterlimit="10" d="M24.379,37.991c0,4.718,3.725,8.536,8.319,8.536
-		c4.594,0,8.317-3.818,8.317-8.536c0-4.723-3.725-8.544-8.317-8.544C28.104,29.447,24.379,33.269,24.379,37.991z"/>
-	<line fill="none" stroke="#010101" stroke-width="2" stroke-miterlimit="10" x1="15.036" y1="64.633" x2="50.359" y2="64.633"/>
+	<path fill="#C5C9CD" stroke="#010101" stroke-width="2" stroke-miterlimit="10" d="M48.88-1210.77
+		c1.652-6.845,2.607-14.833,2.607-23.377c0-25.325-18.657-45.853-18.657-45.853s-18.66,20.528-18.66,45.854
+		c0,8.544,0.953,16.532,2.607,23.377L48.88-1210.77L48.88-1210.77z"/>
+	
+		<line fill="none" stroke="#010101" stroke-width="2" stroke-miterlimit="10" x1="20.919" y1="-1261.604" x2="44.739" y2="-1261.604"/>
+	<path fill="#FFFFFF" stroke="#010101" stroke-width="2" stroke-miterlimit="10" d="M24.509-1242.009
+		c0,4.718,3.725,8.536,8.319,8.536c4.594,0,8.317-3.818,8.317-8.536c0-4.723-3.725-8.544-8.317-8.544
+		C28.234-1250.553,24.509-1246.731,24.509-1242.009z"/>
+	
+		<line fill="none" stroke="#010101" stroke-width="2" stroke-miterlimit="10" x1="15.166" y1="-1215.367" x2="50.489" y2="-1215.367"/>
 </g>
 <g id="Layer_5" display="none">
 	<g id="clous" display="inline">

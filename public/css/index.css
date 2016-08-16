@@ -71,6 +71,39 @@
 	 margin-bottom: 0px;
 }
 
+.recap {
+	margin-top: 20px;
+	border: 3px solid #404040;
+	border-radius: 5px;
+	padding: 10px;
+	display: inline-block;
+	background: #C2EE7C;
+}
+
+.recap-intro {
+	font-weight: 900;
+	font-size: 26px;
+	/*position: absolute;	*/
+	 bottom: 0px;	
+	 /*width: 100%;*/	 
+	 padding-bottom: 0px;
+	 margin-bottom: 0px;
+}
+
+.recap-link {
+	background: transparent;
+	/*color: #404040;*/
+	/*border: 2px solid #404040;	*/
+	font-weight: bold;
+	font-size: 24px;
+	margin: 0 20px 0 20px;		
+	padding: 5px;	
+}
+
+.recap-link:hover {
+	/*color: black;*/
+}
+
 .banner-img {	
 	width: 100%;	
 	z-index: 0;
