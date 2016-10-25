@@ -98,6 +98,10 @@
 	top: 0px;
 }
 
+.program-explanation {
+	padding: 0 130px;
+}
+
 .opening-testimonials {
 	margin-top: 40px;
 }
@@ -245,7 +249,11 @@
 	margin-bottom: 20px;
 }
 
-@media (max-device-width: 480px) { 
+@media (max-device-width: 480px) {
+	.program-explanation {
+		padding: 0;
+	}
+
 	.section-description {
 		width: 100%
 	}	
