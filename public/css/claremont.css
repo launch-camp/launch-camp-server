@@ -2,6 +2,22 @@
 	display: none
 }
 
+.logo-row {
+	margin-top: 30px;
+}
+
+.big-logo {
+	height: 110px;
+}
+
+.logo-text.big-logo-text {
+	font-size: 28px;
+}
+
+.left-log-wrapper {
+	margin-right: 20px;
+}
+
 .quarter-container {
 	margin-top: 40px;
 	/*position: relative;
