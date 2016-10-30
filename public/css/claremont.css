@@ -6,16 +6,34 @@
 	margin-top: 30px;
 }
 
-.big-logo {
-	height: 110px;
+.launch-logo-wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
 }
 
+.big-logo {
+	height: 110px;	
+}
+ 
 .logo-text.big-logo-text {
 	font-size: 28px;
+	bottom: 10px;
+	display: block;	
 }
 
-.left-log-wrapper {
-	margin-right: 20px;
+.big-logo-text.logo-text-prefix {
+	left: 0px;
+	margin-right: 5px;
+}
+
+.big-logo-text.logo-text-postfix {
+	right: 0px;
+	margin-left: 5px;
+}
+
+h3.org-intro-text {
+	font-size: 18px;
 }
 
 .quarter-container {
