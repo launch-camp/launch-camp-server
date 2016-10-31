@@ -194,6 +194,20 @@ h4.org-intro-text {
 	padding-bottom: 80px;
 }
 
+.donate-link {	
+	border: 2px solid black;
+	padding: 15px;
+	display: inline-block;
+}
+
+.donate-link-row {
+	margin-top: 10px;
+}
+
+.email-row {
+	margin-top: 20px;
+}
+
 .overview-container {
 	margin-top: 10px;	
 }
@@ -377,9 +391,9 @@ h4.org-intro-text {
 		display: none;
 	}	
 
-	.conclusion-images {
-		display: none;
-	}
+	// .conclusion-images {
+	// 	display: none;
+	// }
 
 	.overview-wrapper {
 		width: 100%;
