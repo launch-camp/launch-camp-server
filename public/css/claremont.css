@@ -3,37 +3,65 @@
 }
 
 .logo-row {
-	margin-top: 30px;
+	// margin-top: 30px;
+	display: flex;
+	align-items: center;
+	margin-bottom: 10px;
+}
+
+.launch-logo {
+	height: 110px;	
+}
+
+.asas-logo {
+	height: 130px;
+}
+ 
+.launch-logo-text {
+	font-size: 28px;
+	margin: 0px;
+}
+
+h4.org-intro-text {
+	// font-size: 18px;
+	text-align: center;
 }
 
 .launch-logo-wrapper {
-	display: flex;
-	justify-content: center;
-	align-items: flex-end;
+   // margin-top: 30px;
+   display: flex;
+   justify-content: center;
+   align-items: flex-end;       
+   color: black;
+}
+
+.launch-logo-wrapper:hover {
+	mouse: pointer;
+	color: black; 
 }
 
 .big-logo {
-	height: 110px;	
+    height: 110px;
 }
- 
+
 .logo-text.big-logo-text {
-	font-size: 28px;
-	bottom: 10px;
-	display: block;	
+   font-size: 28px;
+   bottom: 10px;
+   display: block;
 }
 
 .big-logo-text.logo-text-prefix {
-	left: 0px;
-	margin-right: 5px;
+   left: 0px;
+   margin-right: 5px;
 }
 
 .big-logo-text.logo-text-postfix {
-	right: 0px;
-	margin-left: 5px;
-}
+   right: 0px;
+   margin-left: 5px;
+}    
 
-h3.org-intro-text {
-	font-size: 18px;
+.org-intro {
+	margin-bottom: 10px;
 }
 
 .quarter-container {
@@ -56,13 +84,14 @@ h3.org-intro-text {
 	overflow: hidden;
 }
 
-.intro-container {
-	background: #EDF9FB;  
-  	/*padding: 10px 0px 10px 0px;*/
-  	margin-bottom: 20px;
-  	/*border: 10px solid #EA6759;*/
+.highlight-container {
+	background: #EDF9FB;    
   	border-bottom: 5px solid #FF9185;
   	border-top: 5px solid #FF9185;  	
+}
+
+.intro-container {
+	margin-bottom: 20px;
 }
 
 .intro-text {
@@ -132,17 +161,46 @@ h3.org-intro-text {
 	top: 0px;
 }
 
+.timeline-container {
+	position: relative;
+	margin-top: 20px;
+}
+
+.phase-wrapper {	
+	padding: 10px;
+	display: inline-block;
+	border: 3px solid black;	
+}
+
+.phase-container {
+	margin-bottom: 50px;
+	padding: 10px 0
+}
+
+.phase-container h2 {
+	margin: 0px;
+}
+
 .program-explanation {
 	padding: 0 130px;
+	margin-bottom: 20px;
 }
 
 .opening-testimonials {
-	margin-top: 40px;
+	margin-top: 20px;
+}
+
+.content {
+	padding-bottom: 80px;
 }
 
 .overview-container {
-	margin-top: 50px;	
-	padding-bottom: 80px;
+	margin-top: 10px;	
+}
+
+.results-container {
+	padding-bottom: 20px;
+	margin: 20px;
 }
 
 .rocket-sidebar {	
