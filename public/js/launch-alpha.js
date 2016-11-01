@@ -20,5 +20,10 @@ $(function() {
 		source:"phase-two-container",
 		target:"phase-three-container"
 	});		
+
+	timelineConnector.connect({
+		source:"phase-three-container",
+		target:"donate-container"
+	});		
 })
 

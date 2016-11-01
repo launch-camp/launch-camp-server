@@ -194,14 +194,14 @@ h4.org-intro-text {
 	padding-bottom: 80px;
 }
 
-.donate-link {	
-	border: 2px solid black;
-	padding: 15px;
+.donate-link-row {	
+	border: 3px solid black;
 	display: inline-block;
+	padding: 15px;	
 }
 
-.donate-link-row {
-	margin-top: 10px;
+.donate-link {
+
 }
 
 .email-row {
