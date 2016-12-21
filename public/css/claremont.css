@@ -24,7 +24,7 @@
 
 h4.org-intro-text {
 	// font-size: 18px;
-	text-align: center;
+	text-align: left;
 }
 
 .launch-logo-wrapper {
@@ -62,6 +62,7 @@ h4.org-intro-text {
 
 .org-intro {
 	margin-bottom: 10px;
+	padding-bottom: 10px;
 }
 
 .quarter-container {
@@ -204,6 +205,17 @@ h4.org-intro-text {
 
 }
 
+.support-button {
+	display: table; 
+	margin: 0 auto;
+    padding: 18px 28px;
+    font-size: 22px;
+    line-height: normal;
+    -webkit-border-radius: 8px;
+       -moz-border-radius: 8px;
+            border-radius: 8px;
+}
+
 .email-row {
 	margin-top: 20px;
 }
@@ -212,9 +224,14 @@ h4.org-intro-text {
 	margin-top: 10px;	
 }
 
+.overview-divider{
+	border-bottom: 5px solid #FF9185;
+}
+
 .results-container {
 	padding-bottom: 20px;
-	margin: 20px;
+	margin-top: 20px;
+	margin-bottom: 20px;
 }
 
 .rocket-sidebar {	
