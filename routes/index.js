@@ -51,11 +51,11 @@ router.post('/confirmation', function(req, res, next) {
 	sessionNumber = enrollment["Session"];
 
 	if (sessionNumber === "1") {
-		enrollment["Session"] = "6/20 - 7/1: Design Tech High School, Millbrae"
+		enrollment["Session"] = "6/12 - 6/23: Millbrae"
 	} else if (sessionNumber === "2") {
-		enrollment["Session"] = "7/11 - 7/22: Union Square, San Francisco"		
+		enrollment["Session"] = "7/10 - 7/21: San Francisco"		
 	} else {
-		enrollment["Session"] = "7/27 - 8/9: Cubberley Community Center, Palo Alto"
+		enrollment["Session"] = "7/31 - 8/11: Palo Alto"
 	}
 
 	var coupon = getCoupon(req.body["Discount Code"]);
