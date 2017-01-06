@@ -107,33 +107,33 @@ var fifteenPercent = ["hickman", "launch", "wang", "hu", "liu", "saheli", "searc
 
 function checkCouponCode(code) {
 	if (seventyFivePercent.indexOf(code.toLowerCase()) > -1) {
-		return 30000;
+		return 37500;
 	} else if (fiftyPercent.indexOf(code.toLowerCase()) > -1) {
-		return 60000;
+		return 75000;
 	} else if (thirtyPercent.indexOf(code.toLowerCase()) > -1) {
-		return 84000;
+		return 105000;
 	} else if (twentyPercent.indexOf(code.toLowerCase()) > -1) {
-		return 96000;
+		return 120000;
 	} else if (fifteenPercent.indexOf(code.toLowerCase()) > -1) {
-		return 102000;
+		return 127500;
 	} else {
-		return 100;
+		return 150000;
 	}
 }
 
 function getCoupon(code) {
 	if (seventyFivePercent.indexOf(code.toLowerCase()) > -1) {
-		return {price: "$300.00", discount: "75%"}
+		return {price: "$375.00", discount: "75%"}
 	} else if (fiftyPercent.indexOf(code.toLowerCase()) > -1) {
-		return {price: "$600.00", discount: "50%"}
+		return {price: "$750.00", discount: "50%"}
 	} else if (thirtyPercent.indexOf(code.toLowerCase()) > -1) {
-		return {price: "$840.00", discount: "30%"}
+		return {price: "$1050.00", discount: "30%"}
 	} else if (twentyPercent.indexOf(code.toLowerCase()) > -1) {
-		return {price: "$960.00", discount: "20%"}
+		return {price: "$1200.00", discount: "20%"}
 	} else if (fifteenPercent.indexOf(code.toLowerCase()) > -1) {
-		return {price: "$1,020.00", discount: "15%"}
+		return {price: "$1,275.00", discount: "15%"}
 	} else {
-		return {price: "$1.00"}
+		return {price: "$1,200.00"}
 	}
 }
 
