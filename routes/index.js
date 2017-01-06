@@ -117,7 +117,7 @@ function checkCouponCode(code) {
 	} else if (fifteenPercent.indexOf(code.toLowerCase()) > -1) {
 		return 102000;
 	} else {
-		return 120000;
+		return 100;
 	}
 }
 
@@ -133,7 +133,7 @@ function getCoupon(code) {
 	} else if (fifteenPercent.indexOf(code.toLowerCase()) > -1) {
 		return {price: "$1,020.00", discount: "15%"}
 	} else {
-		return {price: "$1,200.00"}
+		return {price: "$1.00"}
 	}
 }
 
