@@ -126,9 +126,10 @@ label.error {
 	margin-top: 20px;
 }
 
-.btn-space {
+.btn-enroll-now {
 	margin-bottom: 20px;
 	margin-top: 10px;
+	background: #5B9EAA;
 }
 
 #mc_embed_signup {
