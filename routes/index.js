@@ -53,7 +53,7 @@ router.post('/confirmation', function(req, res, next) {
 	if (sessionNumber === "1") {
 		enrollment["Session"] = "6/12 - 6/23: Millbrae"
 	} else if (sessionNumber === "2") {
-		enrollment["Session"] = "7/10 - 7/21: San Francisco"		
+		enrollment["Session"] = "7/17 - 7/28: San Francisco"		
 	} else {
 		enrollment["Session"] = "7/31 - 8/11: Palo Alto"
 	}
@@ -108,7 +108,7 @@ var fifteenPercent = ["hickman", "launch", "wang", "hu", "liu", "saheli", "searc
 
 function checkCouponCode(code) {
 	if (seventyFivePercent.indexOf(code.toLowerCase()) > -1) {
-		return 100;
+		return 37500;
 	} else if (fiftyPercent.indexOf(code.toLowerCase()) > -1) {
 		return 75000;
 	} else if (thirtyPercent.indexOf(code.toLowerCase()) > -1) {
@@ -117,8 +117,6 @@ function checkCouponCode(code) {
 		return 120000;
 	} else if (fifteenPercent.indexOf(code.toLowerCase()) > -1) {
 		return 127500;
-	} else if (testPercent.indexOf(code.toLowerCase()) > -1) {
-		return 100;
 	} else {
 		return 150000;
 	}
@@ -126,7 +124,7 @@ function checkCouponCode(code) {
 
 function getCoupon(code) {
 	if (seventyFivePercent.indexOf(code.toLowerCase()) > -1) {
-		return {price: "$1.00", discount: "99%"}
+		return {price: "$375.00", discount: "75%"}
 	} else if (fiftyPercent.indexOf(code.toLowerCase()) > -1) {
 		return {price: "$750.00", discount: "50%"}
 	} else if (thirtyPercent.indexOf(code.toLowerCase()) > -1) {
@@ -135,8 +133,6 @@ function getCoupon(code) {
 		return {price: "$1200.00", discount: "20%"}
 	} else if (fifteenPercent.indexOf(code.toLowerCase()) > -1) {
 		return {price: "$1,275.00", discount: "15%"}
-	} else if (testPercent.indexOf(code.toLowerCase()) > -1) {
-		return {price: "$1.00", discount: "99%"}
 	} else {
 		return {price: "$1,200.00"}
 	}
