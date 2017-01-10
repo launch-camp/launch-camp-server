@@ -98,12 +98,13 @@ router.post("/invoice", function(req, res, next) {
 		return 
 	})	
 })
-
+var testPercent = ["test"];
 var seventyFivePercent = ["brianna", "tria"];
 var fiftyPercent = ["la", "bc", "dtech"];
 var thirtyPercent = ["crystal", "liyan"];
 var twentyPercent = ["parab", "gwc", "gunn", "farley", "sell", "start", "dooley", "bui", "chen"];
 var fifteenPercent = ["hickman", "launch", "wang", "hu", "liu", "saheli", "search", "shetty", "allen"];
+
 
 function checkCouponCode(code) {
 	if (seventyFivePercent.indexOf(code.toLowerCase()) > -1) {
@@ -116,6 +117,8 @@ function checkCouponCode(code) {
 		return 120000;
 	} else if (fifteenPercent.indexOf(code.toLowerCase()) > -1) {
 		return 127500;
+	} else if (testPercent.indexOf(code.toLowerCase()) > -1) {
+		return 100;
 	} else {
 		return 150000;
 	}
@@ -132,6 +135,8 @@ function getCoupon(code) {
 		return {price: "$1200.00", discount: "20%"}
 	} else if (fifteenPercent.indexOf(code.toLowerCase()) > -1) {
 		return {price: "$1,275.00", discount: "15%"}
+	} else if (testPercent.indexOf(code.toLowerCase()) > -1) {
+		return {price: "$1.00", discount: "99%"}
 	} else {
 		return {price: "$1,200.00"}
 	}
