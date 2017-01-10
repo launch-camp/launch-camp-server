@@ -108,7 +108,7 @@ var fifteenPercent = ["hickman", "launch", "wang", "hu", "liu", "saheli", "searc
 
 function checkCouponCode(code) {
 	if (seventyFivePercent.indexOf(code.toLowerCase()) > -1) {
-		return 37500;
+		return 100;
 	} else if (fiftyPercent.indexOf(code.toLowerCase()) > -1) {
 		return 75000;
 	} else if (thirtyPercent.indexOf(code.toLowerCase()) > -1) {
@@ -126,7 +126,7 @@ function checkCouponCode(code) {
 
 function getCoupon(code) {
 	if (seventyFivePercent.indexOf(code.toLowerCase()) > -1) {
-		return {price: "$375.00", discount: "75%"}
+		return {price: "$1.00", discount: "99%"}
 	} else if (fiftyPercent.indexOf(code.toLowerCase()) > -1) {
 		return {price: "$750.00", discount: "50%"}
 	} else if (thirtyPercent.indexOf(code.toLowerCase()) > -1) {
