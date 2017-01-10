@@ -429,6 +429,13 @@ h4.instructor-name {
 	background: #C1E4EA;	
 }
 
+#mc_embed_signup {
+	background:#fff; 
+	clear:left; 
+	font:14px Helvetica,Arial,sans-serif; 
+	width:100%;
+}
+				
 h4.newsletter-thankyou {
 	color: #A82719;
 	margin-top: 10px;
