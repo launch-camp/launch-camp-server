@@ -102,9 +102,9 @@ var testPercent = ["test"];
 var seventyFivePercent = ["brianna", "tria"];
 var fiftyPercent = ["la", "bc", "dtech"];
 var thirtyPercent = ["crystal", "liyan"];
-var twentyPercent = ["parab", "gwc", "gunn", "farley", "sell", "start", "dooley", "bui", "chen"];
+var twentyPercent = ["parab", "gwc", "farley", "sell", "start", "dooley", "bui", "chen"];
 var fifteenPercent = ["hickman", "launch", "wang", "hu", "liu", "saheli", "search", "shetty", "allen"];
-var hundredDollar = ["GUNN100"];
+var hundredDollar = ["gunn"];
 
 
 function checkCouponCode(code) {
