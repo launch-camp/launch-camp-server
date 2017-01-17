@@ -104,6 +104,7 @@ var fiftyPercent = ["la", "bc", "dtech"];
 var thirtyPercent = ["crystal", "liyan"];
 var twentyPercent = ["parab", "gwc", "gunn", "farley", "sell", "start", "dooley", "bui", "chen"];
 var fifteenPercent = ["hickman", "launch", "wang", "hu", "liu", "saheli", "search", "shetty", "allen"];
+var hundredDollar = ["GUNN100"];
 
 
 function checkCouponCode(code) {
@@ -117,6 +118,8 @@ function checkCouponCode(code) {
 		return 120000;
 	} else if (fifteenPercent.indexOf(code.toLowerCase()) > -1) {
 		return 127500;
+	} else if (hundredDollar.indexOf(code.toLowerCase()) > -1) {
+		return 140000;
 	} else {
 		return 150000;
 	}
@@ -133,8 +136,10 @@ function getCoupon(code) {
 		return {price: "$1200.00", discount: "20%"}
 	} else if (fifteenPercent.indexOf(code.toLowerCase()) > -1) {
 		return {price: "$1,275.00", discount: "15%"}
+	} else if (hundredDollar.indexOf(code.toLowerCase()) > -1) {
+		return {price: "$1,400.00", discount: "$100"}
 	} else {
-		return {price: "$1,200.00"}
+		return {price: "$1,500.00"}
 	}
 }
 
