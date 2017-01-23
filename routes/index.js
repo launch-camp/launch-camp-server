@@ -104,7 +104,7 @@ var fiftyPercent = ["la", "bc", "dtech"];
 var thirtyPercent = ["crystal", "liyan"];
 var twentyPercent = ["parab", "gwc", "farley", "sell", "start", "dooley", "bui", "chen"];
 var fifteenPercent = ["hickman", "launch", "wang", "hu", "liu", "saheli", "search", "shetty", "allen"];
-var hundredDollar = ["gunn"];
+var hundredDollar = ["gunn", "earlybird"];
 
 
 function checkCouponCode(code) {
